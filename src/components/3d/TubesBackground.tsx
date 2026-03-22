@@ -35,9 +35,9 @@ export function TubesBackground({
       if (!canvasRef.current) return;
 
       try {
-        // Use webpackIgnore to prevent Next.js from trying to bundle the CDN URL
-        // @ts-ignore
-        const module = await import(/* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js");
+        // Bypass Webpack & Next.js Babel entirely using native browser import via Function
+        const nativeImport = new Function('url', 'return import(url)');
+        const module = await nativeImport("https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js");
         const TubesCursor = module.default;
 
         if (!mounted) return;
