@@ -18,6 +18,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
 @utility glass {
   background: rgba(10, 10, 10, 0.7); /* More opaque to compensate for lost blur */
   border: 1px solid rgba(255, 255, 255, 0.05);
