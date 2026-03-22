@@ -37,9 +37,7 @@ export function TubesBackground({
       try {
         // Use webpackIgnore to prevent Next.js from trying to bundle the CDN URL
         // @ts-ignore
-        const module = await import(
-          /* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js"
-        );
+        const module = await import(/* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js");
         const TubesCursor = module.default;
 
         if (!mounted) return;
