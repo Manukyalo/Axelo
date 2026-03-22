@@ -1,4 +1,4 @@
-import { TubesBackground } from "@/components/3d/TubesBackground";
+import { HeroSceneDynamic as HeroScene } from "@/components/3d/HeroSceneDynamic";
 import { HeroContent } from "@/components/sections/HeroContent";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
@@ -9,11 +9,9 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full flex flex-col overflow-x-hidden bg-[#050505] cursor-crosshair">
-      {/* 3D Background - Interactive Tubes */}
-      <div className="absolute inset-0 w-full min-h-screen z-0">
-        <TubesBackground />
-      </div>
+    <main className="relative min-h-screen w-full flex flex-col overflow-x-hidden bg-[#050505]">
+      {/* 3D Background - Loaded dynamically to prioritize LCP */}
+      <HeroScene />
       
       {/* Immersive Freestanding Hero Typography */}
       <HeroContent />
