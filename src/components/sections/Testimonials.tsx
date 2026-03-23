@@ -13,35 +13,38 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Nova Tech Africa didn't just build our platform — they transformed how we operate. The ERP system they delivered handles our entire supply chain across 6 countries with zero disruption. The quality and speed were unlike anything we'd seen from any vendor before.",
+      "Nova Tech Africa didn't just build our ERP — they rebuilt how our entire operation runs. We went from managing spreadsheets across 6 countries to a single real-time dashboard. The ROI within the first 6 months was undeniable.",
     name: "James Odhiambo",
     role: "CTO",
     company: "FreightLink East Africa",
     country: "Kenya 🇰🇪",
     initials: "JO",
     accent: "#00FFB2",
+    gradient: "from-[#00FFB2] to-[#7B61FF]",
   },
   {
     id: 2,
     quote:
-      "We came to Nova Tech with an idea on a napkin — six months later we had a fully functional FinTech platform processing real transactions. Their ML fraud detection has saved us over $180,000 in chargebacks in the first year alone. Absolutely elite team.",
+      "We'd worked with agencies in London and Dubai before. Nova Tech Africa matched that quality at a fraction of the cost, and they actually understood our African market context. The Aura Pay platform has processed over $12M in its first quarter.",
     name: "Amara Diallo",
     role: "CEO",
     company: "Aura Financial Technologies",
     country: "Nigeria 🇳🇬",
     initials: "AD",
     accent: "#7B61FF",
+    gradient: "from-[#7B61FF] to-[#FF6B35]",
   },
   {
     id: 3,
     quote:
-      "As a health-tech company, we needed a partner who understood both technical excellence and regulatory nuance. Nova Tech Africa delivered a platform that's now used by 10,000+ clinicians daily. They're not a vendor — they're a true engineering partner.",
-    name: "Dr. Sarah Kimani",
-    role: "Founder & CEO",
-    company: "Lumina Health Systems",
-    country: "Kenya 🇰🇪",
-    initials: "SK",
+      "The Lumina Health platform connected our 10,000+ provider network seamlessly. What impressed us most was how the team handled offline-first architecture for clinics in rural areas — something no other vendor had even considered.",
+    name: "Dr. Priya Mehta",
+    role: "Product Lead",
+    company: "Lumina Health",
+    country: "South Africa 🇿🇦",
+    initials: "PM",
     accent: "#FF6B35",
+    gradient: "from-[#FF6B35] to-[#00FFB2]",
   },
 ];
 
@@ -129,12 +132,7 @@ export function Testimonials() {
               <div className="flex items-center gap-4">
                 {/* Avatar */}
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 border"
-                  style={{
-                    background: `${t.accent}18`,
-                    borderColor: `${t.accent}35`,
-                    color: t.accent,
-                  }}
+                  className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 border border-white/20 bg-gradient-to-br ${t.gradient} text-white shadow-[0_4px_15px_rgba(0,0,0,0.3)]`}
                 >
                   {t.initials}
                 </div>
@@ -148,44 +146,53 @@ export function Testimonials() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation arrows */}
-          <div className="flex items-center justify-between mt-8">
-            <button
-              onClick={() => advance(-1)}
-              aria-label="Previous testimonial"
-              className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 transition-all duration-300"
-            >
-              ←
-            </button>
+          {/* Navigation arrows & Disclaimer */}
+          <div className="mt-12 flex flex-col items-center gap-8">
+            <div className="flex items-center justify-between w-full">
+              <button
+                onClick={() => advance(-1)}
+                aria-label="Previous testimonial"
+                className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 transition-all duration-300"
+              >
+                ←
+              </button>
 
-            {/* Dots */}
-            <div className="flex items-center gap-2">
-              {testimonials.map((t2, i) => (
-                <button
-                  key={t2.id}
-                  onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                  className="transition-all duration-300"
-                >
-                  <span
-                    className="block rounded-full transition-all duration-300"
-                    style={{
-                      width: i === current ? 24 : 6,
-                      height: 6,
-                      background: i === current ? t.accent : "rgba(255,255,255,0.15)",
+              {/* Dots */}
+              <div className="flex items-center gap-2">
+                {testimonials.map((t2, i) => (
+                  <button
+                    key={t2.id}
+                    onClick={() => {
+                      setDirection(i > current ? 1 : -1);
+                      setCurrent(i);
                     }}
-                  />
-                </button>
-              ))}
+                    aria-label={`Go to testimonial ${i + 1}`}
+                    className="transition-all duration-300"
+                  >
+                    <span
+                      className="block rounded-full transition-all duration-300"
+                      style={{
+                        width: i === current ? 24 : 6,
+                        height: 6,
+                        background: i === current ? t.accent : "rgba(255,255,255,0.15)",
+                      }}
+                    />
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={() => advance(1)}
+                aria-label="Next testimonial"
+                className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 transition-all duration-300"
+              >
+                →
+              </button>
             </div>
 
-            <button
-              onClick={() => advance(1)}
-              aria-label="Next testimonial"
-              className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 transition-all duration-300"
-            >
-              →
-            </button>
+            <p className="text-[11px] text-[#8888AA] italic opacity-60 font-mono text-center">
+              All client details used with permission. Some project details withheld under NDA.
+            </p>
           </div>
         </div>
       </div>

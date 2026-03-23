@@ -185,18 +185,26 @@ const CaseStudyCard = memo(
         ))}
       </div>
 
-      <button
-        className="text-[12px] font-semibold flex items-center gap-1.5 transition-all duration-300"
-        style={{ color: study.accent }}
-      >
-        View Case Study
-        <motion.span
-          animate={{ x: [0, 3, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+      {/* Actions */}
+      <div className="flex flex-col sm:flex-row gap-3 mt-6">
+        <a 
+          href={`/work/${study.id}`}
+          className="flex-1 px-6 py-3 rounded-xl bg-white/[0.05] border border-white/[0.1] text-[#F0F0FF] text-[13px] font-semibold text-center hover:bg-[#00FFB2]/10 hover:border-[#00FFB2]/30 transition-all duration-300"
         >
-          →
-        </motion.span>
-      </button>
+          Read Case Study
+        </a>
+        <div className="relative group/nda flex-1">
+          <button
+            disabled
+            className="w-full px-6 py-3 rounded-xl bg-white/[0.02] border border-white/[0.05] text-[#8888AA]/50 text-[13px] font-semibold cursor-not-allowed flex items-center justify-center gap-2"
+          >
+            🔒 Under NDA
+          </button>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-[#0D0D1A] border border-white/10 rounded-lg text-[10px] text-[#8888AA] whitespace-nowrap opacity-0 group-hover/nda:opacity-100 transition-opacity pointer-events-none z-20">
+            Client confidentiality agreement in place
+          </div>
+        </div>
+      </div>
     </motion.article>
   )
 );
