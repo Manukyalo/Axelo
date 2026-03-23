@@ -3,49 +3,143 @@
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 
-const technologies = [
-  "React", "Next.js", "TypeScript", "Node.js", "Python", 
-  "TensorFlow", "AWS", "Docker", "Kubernetes", "PostgreSQL",
-  "Three.js", "GraphQL", "Redis", "Framer Motion", "Tailwind CSS"
+const techCategories = [
+  {
+    label: "Frontend",
+    items: [
+      { name: "React", color: "#61DAFB" },
+      { name: "Next.js", color: "#F0F0FF" },
+      { name: "TypeScript", color: "#3178C6" },
+      { name: "Framer Motion", color: "#BB4BFF" },
+      { name: "Three.js", color: "#00FFB2" },
+    ],
+  },
+  {
+    label: "Backend",
+    items: [
+      { name: "Node.js", color: "#84CC16" },
+      { name: "Python", color: "#FFD43B" },
+      { name: "FastAPI", color: "#00FFB2" },
+      { name: "GraphQL", color: "#E10098" },
+      { name: "Rust", color: "#FF6B35" },
+    ],
+  },
+  {
+    label: "AI / ML",
+    items: [
+      { name: "TensorFlow", color: "#FF6F00" },
+      { name: "PyTorch", color: "#EE4C2C" },
+      { name: "OpenAI", color: "#74AA9C" },
+      { name: "LangChain", color: "#7B61FF" },
+      { name: "Hugging Face", color: "#FFD21E" },
+    ],
+  },
+  {
+    label: "Cloud & DevOps",
+    items: [
+      { name: "AWS", color: "#FF9900" },
+      { name: "GCP", color: "#4285F4" },
+      { name: "Docker", color: "#2496ED" },
+      { name: "Kubernetes", color: "#326CE5" },
+      { name: "Terraform", color: "#7B61FF" },
+    ],
+  },
+  {
+    label: "Database",
+    items: [
+      { name: "PostgreSQL", color: "#4169E1" },
+      { name: "Redis", color: "#FF6B6B" },
+      { name: "MongoDB", color: "#47A248" },
+      { name: "Firebase", color: "#FFCA28" },
+      { name: "Supabase", color: "#3ECF8E" },
+    ],
+  },
 ];
 
-const TechBadge = memo(({ tech, index }: { tech: string; index: number }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.9, y: 10 }}
-    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: index * 0.02, ease: [0.22, 1, 0.36, 1] }}
-    whileHover={{ y: -3, scale: 1.05 }}
-    className="px-6 py-2.5 rounded-full border border-white/10 hover:border-[#7000ff]/40 hover:bg-white/5 transition-all cursor-default bg-black/40 backdrop-blur-xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] gpu"
-  >
-    <span className="text-sm font-medium text-gray-300 tracking-wider hover:text-white transition-colors">{tech}</span>
-  </motion.div>
-));
-
-TechBadge.displayName = "TechBadge";
-
-export const TechStack = memo(() => {
-  return (
-    <section className="py-24 px-6 relative z-10 w-full bg-[#030303] border-y border-white/5 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.05)_0%,transparent_70%)] pointer-events-none" />
-      
-      <div className="max-w-7xl mx-auto text-center mb-16 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6 text-white">
-          Powered by <span className="text-gradient">Modern Tech</span>
-        </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          We utilize industry-leading technologies to build fast, secure, and scalable digital products.
-        </p>
+const TechItem = memo(
+  ({ name, color }: { name: string; color: string }) => (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      className="group flex flex-col items-center gap-2 p-4 rounded-xl glass border border-white/[0.06] hover:border-white/[0.16] transition-all duration-300 cursor-default"
+      style={{ "--glow": color } as React.CSSProperties}
+    >
+      {/* Color swatch / logo placeholder */}
+      <div
+        className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+        style={{ background: `${color}12`, border: `1px solid ${color}25` }}
+      >
+        <div
+          className="w-4 h-4 rounded-sm"
+          style={{ background: color, opacity: 0.85 }}
+        />
       </div>
+      <span className="font-mono text-[10px] text-[#8888AA] group-hover:text-[#F0F0FF] transition-colors duration-300 text-center leading-tight tracking-wide">
+        {name}
+      </span>
+      {/* Soft glow on hover */}
+      <div
+        className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none blur-xl"
+        style={{ background: `${color}0A` }}
+      />
+    </motion.div>
+  )
+);
+TechItem.displayName = "TechItem";
 
-      <div className="relative flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl mx-auto z-10">
-        {technologies.map((tech, i) => (
-          <TechBadge key={tech} tech={tech} index={i} />
+export const TechStack = memo(() => (
+  <section
+    className="py-32 px-6 relative z-10 w-full bg-[#03000A] border-t border-white/[0.04]"
+    aria-labelledby="tech-heading"
+  >
+    <div className="max-w-7xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.65 }}
+        className="text-center mb-16"
+      >
+        <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+          Our Stack
+        </span>
+        <h2
+          id="tech-heading"
+          className="font-bold text-[#F0F0FF] tracking-tighter leading-[1.05] mb-5"
+          style={{ fontSize: "clamp(28px, 4vw, 56px)" }}
+        >
+          Our Technology <span className="text-gradient-mint">Arsenal</span>
+        </h2>
+        <p className="text-[#8888AA] max-w-md mx-auto text-[14px] leading-[1.8]">
+          We work with the world&apos;s most powerful and proven modern technologies.
+        </p>
+      </motion.div>
+
+      <div className="flex flex-col gap-8">
+        {techCategories.map((cat, catIndex) => (
+          <motion.div
+            key={cat.label}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: catIndex * 0.08, duration: 0.5 }}
+          >
+            <h3 className="font-mono text-[10px] tracking-[0.28em] uppercase text-[#8888AA]/60 mb-3 ml-1">
+              {cat.label}
+            </h3>
+            <div className="grid grid-cols-5 sm:grid-cols-5 gap-3">
+              {cat.items.map((item) => (
+                <div key={item.name} className="relative">
+                  <TechItem name={item.name} color={item.color} />
+                </div>
+              ))}
+            </div>
+          </motion.div>
         ))}
       </div>
-    </section>
-  );
-});
-
+    </div>
+  </section>
+));
 TechStack.displayName = "TechStack";
-

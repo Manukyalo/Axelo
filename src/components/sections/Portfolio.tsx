@@ -4,126 +4,258 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-const projects = [
+const caseStudies = [
   {
+    id: "nexgen-erp",
     title: "NexGen ERP",
-    category: "Cloud Software",
-    description: "A comprehensive, AI-driven enterprise resource planning system tailored for multinational logistics.",
+    industry: ["Logistics", "Cloud Software"],
+    result:
+      "Reduced operational overhead by 34% for a multinational logistics firm operating across 6 African countries. Handles 500,000+ daily transactions with 99.97% uptime.",
+    stack: ["Next.js", "PostgreSQL", "AWS", "Docker", "Redis"],
+    accent: "#00FFB2",
+    year: "2025",
+    gradient: "from-[#00FFB2]/10 via-[#7B61FF]/5 to-transparent",
   },
   {
+    id: "aura-pay",
     title: "Aura Pay",
-    category: "FinTech Platform",
-    description: "Secure, high-frequency trading platform with real-time analytics and predictive ML modeling.",
+    industry: ["FinTech", "AI"],
+    result:
+      "Processed over $12M in transactions in the first quarter post-launch. ML fraud detection model achieved 99.2% accuracy, reducing chargebacks by 67%.",
+    stack: ["Python", "TensorFlow", "Node.js", "React", "Kubernetes"],
+    accent: "#7B61FF",
+    year: "2025",
+    gradient: "from-[#7B61FF]/10 via-[#FF6B35]/5 to-transparent",
   },
   {
+    id: "lumina-health",
     title: "Lumina Health",
-    category: "SaaS Application",
-    description: "Healthcare management platform connecting over 10,000 providers with predictive patient care.",
-  }
+    industry: ["HealthTech", "SaaS"],
+    result:
+      "Connected 10,000+ healthcare providers across East Africa with a real-time patient management platform, cutting admin time by 40%.",
+    stack: ["Flutter", "Firebase", "GraphQL", "TypeScript"],
+    accent: "#FF6B35",
+    year: "2024",
+    gradient: "from-[#FF6B35]/10 via-[#00FFB2]/5 to-transparent",
+  },
 ];
 
-const ProjectItem = memo(({ project, index }: { project: typeof projects[0]; index: number }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-5%" }}
-    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-    className={`flex flex-col md:flex-row gap-12 md:gap-20 items-center ${
-      index % 2 === 1 ? "md:flex-row-reverse" : ""
-    } gpu`}
+// Placeholder project "mockup" image using Canvas-style colored panel
+const ProjectVisual = ({
+  accent,
+  gradient,
+  title,
+}: {
+  accent: string;
+  gradient: string;
+  title: string;
+}) => (
+  <div
+    className={`relative w-full aspect-[16/8] rounded-xl overflow-hidden bg-gradient-to-br ${gradient} border border-white/[0.07] group-hover:border-white/[0.12] transition-all duration-500`}
   >
-    {/* High-End Minimalist UI Mockup Container */}
-    <div className="flex-1 w-full aspect-video md:aspect-[16/10] relative rounded-3xl overflow-hidden group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-[#050505] border border-white/5">
-      {/* Dynamic Background Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00f0ff]/5 to-[#7000ff]/10 group-hover:opacity-100 opacity-50 transition-opacity duration-700 pointer-events-none z-0" />
-      
-      {/* macOS Window Controls */}
-      <div className="absolute top-0 left-0 w-full h-10 border-b border-white/5 flex items-center px-4 gap-2 z-20 bg-black/20 backdrop-blur-md">
-        <div className="w-2.5 h-2.5 rounded-full bg-white/10 group-hover:bg-red-500/80 transition-colors duration-300" />
-        <div className="w-2.5 h-2.5 rounded-full bg-white/10 group-hover:bg-yellow-500/80 transition-colors duration-300 delay-75" />
-        <div className="w-2.5 h-2.5 rounded-full bg-white/10 group-hover:bg-green-500/80 transition-colors duration-300 delay-150" />
-      </div>
-
-      {/* Abstract Dashboard Wireframe */}
-      <div className="absolute top-14 left-6 right-6 bottom-6 flex gap-4 z-10 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
-        {/* Sidebar */}
-        <div className="w-1/4 h-full rounded-lg border border-white/5 bg-white/[0.02] flex flex-col gap-3 p-3">
-          <div className="w-full h-4 rounded bg-white/5" />
-          <div className="w-3/4 h-4 rounded bg-white/5" />
-          <div className="w-5/6 h-4 rounded bg-white/5" />
-        </div>
-        {/* Main Content Area */}
-        <div className="w-3/4 h-full flex flex-col gap-4">
-          <div className="w-full h-1/3 rounded-lg border border-white/5 bg-gradient-to-tr from-[#00f0ff]/10 to-transparent flex items-center justify-center overflow-hidden relative">
-            <motion.div 
-              className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_50%)]"
-              animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            />
-          </div>
-          <div className="w-full flex-1 flex gap-4">
-             <div className="flex-1 rounded-lg border border-white/5 bg-white/[0.02]" />
-             <div className="flex-1 rounded-lg border border-white/5 bg-white/[0.02]" />
-          </div>
-        </div>
-      </div>
-      
-      {/* Title Overlay on Hover */}
-      <div className="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40 backdrop-blur-sm">
-        <span className="text-white font-heading text-xl tracking-widest uppercase border border-white/20 px-6 py-3 rounded-full bg-white/5">
-          View Live Platform
-        </span>
+    {/* Window chrome */}
+    <div className="absolute top-0 left-0 right-0 h-9 flex items-center px-4 gap-2 border-b border-white/[0.05] bg-black/20">
+      {["#FF5F57", "#FFBD2E", "#28CA41"].map((c) => (
+        <span key={c} className="w-2.5 h-2.5 rounded-full" style={{ background: c }} />
+      ))}
+      <div
+        className="ml-auto font-mono text-[9px] tracking-widest uppercase opacity-50"
+        style={{ color: accent }}
+      >
+        {title}
       </div>
     </div>
 
-    {/* Content */}
-    <div className="flex-1 flex flex-col justify-center">
-      <span className="inline-block px-3 py-1 rounded-full border border-[#00f0ff]/30 text-[#00f0ff] font-medium tracking-widest uppercase text-xs mb-6 self-start bg-[#00f0ff]/5">
-        {project.category}
-      </span>
-      <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading tracking-tight">{project.title}</h3>
-      <p className="text-gray-400 text-lg leading-relaxed mb-10 font-light">
-        {project.description}
-      </p>
-      <button className="self-start px-8 py-4 rounded-full border border-white/20 hover:bg-white text-white hover:text-black transition-all duration-300 font-medium tracking-wide gpu">
-        Read Case Study
-      </button>
-    </div>
-  </motion.div>
-));
+    {/* Abstract dashboard content */}
+    <div className="absolute top-9 left-5 right-5 bottom-5 flex gap-3">
+      {/* Sidebar placeholder */}
+      <div className="w-1/5 flex flex-col gap-2 pt-2 opacity-60">
+        {[75, 50, 85, 60].map((w, i) => (
+          <div
+            key={i}
+            className="h-2.5 rounded-full"
+            style={{
+              width: `${w}%`,
+              background: i === 0 ? accent : "rgba(255,255,255,0.06)",
+            }}
+          />
+        ))}
+      </div>
 
-ProjectItem.displayName = "ProjectItem";
-
-export const Portfolio = memo(() => {
-  return (
-    <section className="py-24 px-6 relative z-10 w-full bg-background" id="projects">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-between items-end mb-20"
+      {/* Main area */}
+      <div className="flex-1 flex flex-col gap-3">
+        {/* Chart */}
+        <div
+          className="flex-1 rounded-xl border border-white/[0.05] relative overflow-hidden"
+          style={{ background: `${accent}06` }}
         >
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4 text-white">
-              Featured <span className="text-gradient">Projects</span>
-            </h2>
-            <p className="text-gray-400 text-lg">Delivering excellence across industries.</p>
+          <div className="absolute bottom-0 left-0 right-0 flex items-end gap-1 px-4 pb-3 h-3/4">
+            {[45, 70, 55, 90, 65, 80, 95, 75, 85, 100].map((h, i) => (
+              <motion.div
+                key={i}
+                initial={{ height: 0 }}
+                whileInView={{ height: `${h}%` }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.04, duration: 0.5, ease: "easeOut" }}
+                className="flex-1 rounded-t-sm"
+                style={{ background: i === 9 ? accent : "rgba(255,255,255,0.08)" }}
+              />
+            ))}
           </div>
-          <button className="hidden md:flex items-center gap-2 text-white hover:text-[#00f0ff] transition-colors pb-2">
-            View All Work <ArrowUpRight className="w-5 h-5" />
-          </button>
-        </motion.div>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `radial-gradient(ellipse at 50% 100%, ${accent}15 0%, transparent 55%)`,
+            }}
+          />
+        </div>
 
-        <div className="flex flex-col gap-20 md:gap-32">
-          {projects.map((project, index) => (
-            <ProjectItem key={project.title} project={project} index={index} />
+        {/* Bottom stat cards */}
+        <div className="flex gap-3 h-[30%]">
+          {[0, 1, 2].map((i) => (
+            <div key={i} className="flex-1 rounded-lg border border-white/[0.05] bg-white/[0.02]" />
           ))}
         </div>
       </div>
-    </section>
-  );
-});
+    </div>
 
+    {/* Hover overlay */}
+    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/50 backdrop-blur-sm">
+      <span
+        className="flex items-center gap-2 text-sm font-semibold border px-5 py-2.5 rounded-full"
+        style={{ color: accent, borderColor: `${accent}40`, background: `${accent}10` }}
+      >
+        View Case Study <ArrowUpRight className="w-4 h-4" />
+      </span>
+    </div>
+  </div>
+);
+
+const CaseStudyCard = memo(
+  ({ study, index }: { study: (typeof caseStudies)[0]; index: number }) => (
+    <motion.article
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-5%" }}
+      transition={{ duration: 0.65, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      className="group glass rounded-2xl p-6 md:p-8 border border-white/[0.07] hover:border-white/[0.14] transition-all duration-500"
+    >
+      <ProjectVisual
+        accent={study.accent}
+        gradient={study.gradient}
+        title={study.title}
+      />
+
+      {/* Meta */}
+      <div className="mt-6 flex items-center gap-2 flex-wrap">
+        {study.industry.map((tag) => (
+          <span
+            key={tag}
+            className="font-mono text-[9px] tracking-[0.2em] uppercase px-2.5 py-1 rounded-full border"
+            style={{
+              color: study.accent,
+              borderColor: `${study.accent}28`,
+              background: `${study.accent}08`,
+            }}
+          >
+            {tag}
+          </span>
+        ))}
+        <span className="ml-auto font-mono text-[10px] text-[#8888AA]">{study.year}</span>
+      </div>
+
+      <h3
+        className="font-bold text-[#F0F0FF] tracking-tight mt-4 mb-3"
+        style={{ fontSize: "clamp(22px, 3vw, 32px)" }}
+      >
+        {study.title}
+      </h3>
+
+      <p className="text-[#8888AA] text-[13px] leading-[1.8] mb-5">{study.result}</p>
+
+      {/* Stack chips */}
+      <div className="flex flex-wrap gap-2 mb-5">
+        {study.stack.map((t) => (
+          <span
+            key={t}
+            className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.07] text-[#8888AA]"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+
+      <button
+        className="text-[12px] font-semibold flex items-center gap-1.5 transition-all duration-300"
+        style={{ color: study.accent }}
+      >
+        View Case Study
+        <motion.span
+          animate={{ x: [0, 3, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          →
+        </motion.span>
+      </button>
+    </motion.article>
+  )
+);
+CaseStudyCard.displayName = "CaseStudyCard";
+
+export const Portfolio = memo(() => (
+  <section
+    className="py-32 px-6 relative z-10 w-full bg-[#03000A] border-t border-white/[0.04]"
+    id="work"
+    aria-labelledby="work-heading"
+  >
+    <div className="max-w-7xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+        className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6"
+      >
+        <div>
+          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+            Selected Work
+          </span>
+          <h2
+            id="work-heading"
+            className="font-bold text-[#F0F0FF] tracking-tighter leading-[1.05]"
+            style={{ fontSize: "clamp(32px, 5vw, 62px)" }}
+          >
+            Selected <span className="text-gradient-full">Work</span>
+          </h2>
+          <p className="text-[#8888AA] text-[15px] mt-3 max-w-sm leading-relaxed">
+            A curated selection of our highest-impact engineering projects.
+          </p>
+        </div>
+        <button className="hidden md:flex items-center gap-2 text-[#8888AA] hover:text-[#00FFB2] transition-colors text-sm font-medium group">
+          View All Projects
+          <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+        </button>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {caseStudies.map((study, i) => (
+          <CaseStudyCard key={study.id} study={study} index={i} />
+        ))}
+      </div>
+
+      {/* Bottom CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mt-14 text-center"
+      >
+        <button className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/[0.12] text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 text-sm font-medium transition-all duration-300">
+          View All Projects <ArrowUpRight className="w-4 h-4" />
+        </button>
+      </motion.div>
+    </div>
+  </section>
+));
 Portfolio.displayName = "Portfolio";
-
