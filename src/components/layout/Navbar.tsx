@@ -58,11 +58,10 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
             ? "bg-[#03000A]/80 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_1px_0_rgba(255,255,255,0.04)]"
             : "bg-transparent"
-        }`}
+          }`}
       >
         <nav
           className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
@@ -78,13 +77,13 @@ export function Navbar() {
               <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                 <defs>
                   <linearGradient id="nav-lg" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#6366F1"/>
-                    <stop offset="100%" stopColor="#7B61FF"/>
+                    <stop offset="0%" stopColor="#6366F1" />
+                    <stop offset="100%" stopColor="#7B61FF" />
                   </linearGradient>
                 </defs>
-                <rect width="36" height="36" rx="9" fill="url(#nav-lg)" fillOpacity="0.15"/>
-                <path d="M18 9L27 25H9L18 9Z" fill="url(#nav-lg)"/>
-                <rect x="13" y="20" width="10" height="2" rx="1" fill="#03000A" fillOpacity="0.85"/>
+                <rect width="36" height="36" rx="9" fill="url(#nav-lg)" fillOpacity="0.15" />
+                <path d="M18 9L27 25H9L18 9Z" fill="url(#nav-lg)" />
+                <rect x="13" y="20" width="10" height="2" rx="1" fill="#03000A" fillOpacity="0.85" />
               </svg>
               <div className="absolute inset-0 bg-[#6366F1]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -207,7 +206,7 @@ export function Navbar() {
               >
                 <div className="space-y-1">
                   <a
-                    href="mailto:hello@axelo.io"
+                    href="mailto:emmanuelkyalo91@gmail.com"
                     className="flex items-center gap-2 text-[13px] font-mono text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300"
                   >
                     <Mail className="w-3.5 h-3.5" />

@@ -146,7 +146,7 @@ export function FAQ() {
         >
           Still have questions?{" "}
           <a
-            href="mailto:hello@novatechafrica.com"
+            href="mailto:emmanuelkyalo91@gmail.com"
             className="text-[#6366F1] hover:underline"
           >
             Email us directly →

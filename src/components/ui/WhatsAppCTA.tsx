@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WA_LINK =
-  "https://wa.me/254700000000?text=Hi%20Axelo%2C%20I%27d%20like%20to%20discuss%20a%20project";
+  "https://wa.me/254731237251?text=Hi%20Axelo%2C%20I%27d%20like%20to%20discuss%20a%20project";
 
 function WhatsAppIcon({ size = 28 }: { size?: number }) {
   return (

@@ -45,7 +45,7 @@ const socials = [
   },
   {
     icon: Mail,
-    href: "mailto:hello@axelo.io",
+    href: "mailto:emmanuelkyalo91@gmail.com",
     label: "Email",
     hoverColor: "#6366F1",
   },
@@ -84,13 +84,13 @@ export function Footer() {
                 <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                   <defs>
                     <linearGradient id="footer-lg" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#6366F1"/>
-                      <stop offset="100%" stopColor="#7B61FF"/>
+                      <stop offset="0%" stopColor="#6366F1" />
+                      <stop offset="100%" stopColor="#7B61FF" />
                     </linearGradient>
                   </defs>
-                  <rect width="36" height="36" rx="9" fill="url(#footer-lg)" fillOpacity="0.15"/>
-                  <path d="M18 9L27 25H9L18 9Z" fill="url(#footer-lg)"/>
-                  <rect x="13" y="20" width="10" height="2" rx="1" fill="#03000A" fillOpacity="0.85"/>
+                  <rect width="36" height="36" rx="9" fill="url(#footer-lg)" fillOpacity="0.15" />
+                  <path d="M18 9L27 25H9L18 9Z" fill="url(#footer-lg)" />
+                  <rect x="13" y="20" width="10" height="2" rx="1" fill="#03000A" fillOpacity="0.85" />
                 </svg>
                 <div className="absolute inset-0 bg-[#6366F1]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
@@ -119,11 +119,11 @@ export function Footer() {
             </div>
 
             <a
-              href="mailto:hello@axelo.io"
+              href="mailto:emmanuelkyalo91@gmail.com"
               className="text-[12px] font-mono text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300 flex items-center gap-1.5"
             >
               <Mail className="w-3 h-3" />
-              hello@axelo.io
+              emmanuelkyalo91@gmail.com
             </a>
           </div>
 
