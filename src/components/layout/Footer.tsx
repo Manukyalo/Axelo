@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Linkedin, Twitter, Github, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -81,15 +80,12 @@ export function Footer() {
           {/* Column 1 — Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group" aria-label="Axelo Home">
-              <div className="relative w-10 h-10 flex-shrink-0 group-hover:scale-105 transition-transform duration-500">
-                <Image 
-                  src="/icon.png" 
-                  alt="Axelo Logo" 
-                  width={40} 
-                  height={40}
-                  className="relative z-10"
-                />
-                <div className="absolute inset-0 rounded-full bg-[#6366F1]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative w-9 h-9 flex-shrink-0 group-hover:scale-105 transition-transform duration-500">
+                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <path d="M18 4L32 30H4L18 4Z" stroke="#6366F1" strokeWidth="2.5" fill="none"/>
+                  <path d="M11 21H25" stroke="#6366F1" strokeWidth="2.5" strokeLinecap="round"/>
+                </svg>
+                <div className="absolute inset-0 bg-[#6366F1]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <span className="text-xl font-bold tracking-[0.1em] uppercase text-[#F0F0FF] leading-tight">
                 Axelo
