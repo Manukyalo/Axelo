@@ -11,30 +11,34 @@ const INDUSTRIES = ["All", "FinTech", "Logistics", "HealthTech", "AI", "Cloud", 
 
 const PROJECTS = [
   {
-    title: "NexGen ERP",
-    industry: ["Logistics", "Cloud"],
-    outcome: "Reduced operational overhead by 34% for a multinational firm.",
-    tags: ["Next.js", "AWS", "PostgreSQL"],
+    slug: "car-clan",
+    title: "Car Clan",
+    industry: ["Automotive", "Marketplace"],
+    outcome: "A premium car rental and management platform for a high-end fleet in Kenya. Features real-time booking and fleet tracking.",
+    tags: ["Next.js", "Firebase", "Tailwind"],
     accent: "#00FFB2",
-    year: "2024",
+    year: "2025",
   },
   {
-    title: "Aura Pay",
-    industry: ["FinTech", "AI"],
-    outcome: "Processed $12M+ transactions with 99.2% fraud detection accuracy.",
-    tags: ["Python", "TensorFlow", "React"],
+    slug: "hope-counseling",
+    title: "Hope Counseling",
+    industry: ["Mental Health", "Branding"],
+    outcome: "Modern, empathetic personal website for a professional counselor. Built to provide a serene digital space for university students.",
+    tags: ["Next.js", "Framer Motion", "Tailwind"],
     accent: "#7B61FF",
     year: "2025",
   },
   {
-    title: "Lumina Health",
-    industry: ["HealthTech", "SaaS"],
-    outcome: "Connected 10,000+ providers across East Africa with zero downtime.",
-    tags: ["Flutter", "GraphQL", "Firebase"],
-    accent: "#FF6B35",
+    slug: "eastern-vacations-ems",
+    title: "Eastern Vacations EMS",
+    industry: ["TravelTech", "Enterprise"],
+    outcome: "Custom Enterprise Management System unified Admin and Reservations portals, cutting booking errors for a major tour operator.",
+    tags: ["React", "Firebase", "Vercel"],
+    accent: "#F5A623",
     year: "2025",
   },
   {
+    slug: "orbit-logistics",
     title: "Orbit Logistics",
     industry: ["Logistics", "Enterprise"],
     outcome: "Optimized route planning saving $45k monthly in fuel costs.",
@@ -43,6 +47,7 @@ const PROJECTS = [
     year: "2024",
   },
   {
+    slug: "pulse-ai",
     title: "Pulse AI",
     industry: ["AI", "Enterprise"],
     outcome: "Automated customer sentiment analysis for 5M+ monthly interactions.",
@@ -51,6 +56,7 @@ const PROJECTS = [
     year: "2025",
   },
   {
+    slug: "zenith-bank-portal",
     title: "Zenith Bank Portal",
     industry: ["FinTech", "Enterprise"],
     outcome: "High-security treasury portal handling billion-dollar settlements.",
@@ -106,43 +112,44 @@ export default function WorkPage() {
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((p, i) => (
-              <motion.article
-                key={p.title}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group glass rounded-3xl p-6 border border-white/[0.08] hover:border-white/[0.15] transition-all duration-500 flex flex-col"
-              >
-                {/* Visual Placeholder */}
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent border border-white/[0.05] mb-6 flex items-center justify-center group-hover:bg-[#00FFB2]/5 transition-colors duration-500 overflow-hidden relative">
-                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-                      <span className="px-6 py-2.5 rounded-full border border-[#00FFB2]/40 bg-[#00FFB2]/10 text-[#00FFB2] text-xs font-bold uppercase tracking-widest">View Project</span>
-                   </div>
-                   <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/[0.05] flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                       <ArrowUpRight className="w-8 h-8 text-white/20 group-hover:text-[#00FFB2]/60" />
-                   </div>
-                </div>
+              <Link key={p.slug} href={`/work/${p.slug}`}>
+                <motion.article
+                  layout
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                  className="group glass rounded-3xl p-6 border border-white/[0.08] hover:border-white/[0.15] transition-all duration-500 h-full flex flex-col"
+                >
+                  {/* Visual Placeholder */}
+                  <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-white/[0.03] to-transparent border border-white/[0.05] mb-6 flex items-center justify-center group-hover:bg-[#00FFB2]/5 transition-colors duration-500 overflow-hidden relative">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+                        <span className="px-6 py-2.5 rounded-full border border-[#00FFB2]/40 bg-[#00FFB2]/10 text-[#00FFB2] text-xs font-bold uppercase tracking-widest">View Case Study</span>
+                    </div>
+                    <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/[0.05] flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <ArrowUpRight className="w-8 h-8 text-white/20 group-hover:text-[#00FFB2]/60" />
+                    </div>
+                  </div>
 
-                <div className="flex items-center justify-between mb-4">
-                   <div className="flex gap-2">
-                      {p.industry.slice(0,1).map(ind => (
-                        <span key={ind} className="font-mono text-[9px] tracking-[0.2em] uppercase px-2.5 py-1 rounded-full border border-white/[0.1] text-[#8888AA]">{ind}</span>
-                      ))}
-                   </div>
-                   <span className="font-mono text-[10px] text-[#8888AA]/60">{p.year}</span>
-                </div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-2">
+                        {p.industry.slice(0,1).map(ind => (
+                          <span key={ind} className="font-mono text-[9px] tracking-[0.2em] uppercase px-2.5 py-1 rounded-full border border-white/[0.1] text-[#8888AA]">{ind}</span>
+                        ))}
+                    </div>
+                    <span className="font-mono text-[10px] text-[#8888AA]/60">{p.year}</span>
+                  </div>
 
-                <h3 className="text-xl font-bold mb-3 group-hover:text-[#00FFB2] transition-colors duration-300">{p.title}</h3>
-                <p className="text-[#8888AA] text-[13px] leading-relaxed mb-6 flex-grow">{p.outcome}</p>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-[#00FFB2] transition-colors duration-300">{p.title}</h3>
+                  <p className="text-[#8888AA] text-[13px] leading-relaxed mb-6 flex-grow">{p.outcome}</p>
 
-                <div className="pt-6 border-t border-white/[0.05] flex flex-wrap gap-2">
-                   {p.tags.map(t => (
-                      <span key={t} className="text-[10px] font-mono text-[#8888AA]/70">{t}</span>
-                   ))}
-                </div>
-              </motion.article>
+                  <div className="pt-6 border-t border-white/[0.05] flex flex-wrap gap-2">
+                    {p.tags.map(t => (
+                        <span key={t} className="text-[10px] font-mono text-[#8888AA]/70">{t}</span>
+                    ))}
+                  </div>
+                </motion.article>
+              </Link>
             ))}
           </AnimatePresence>
         </motion.div>
