@@ -37,33 +37,6 @@ const PROJECTS = [
     accent: "#F5A623",
     year: "2025",
   },
-  {
-    slug: "orbit-logistics",
-    title: "Orbit Logistics",
-    industry: ["Logistics", "Enterprise"],
-    outcome: "Optimized route planning saving $45k monthly in fuel costs.",
-    tags: ["Node.js", "Docker", "GCP"],
-    accent: "#00FFB2",
-    year: "2024",
-  },
-  {
-    slug: "pulse-ai",
-    title: "Pulse AI",
-    industry: ["AI", "Enterprise"],
-    outcome: "Automated customer sentiment analysis for 5M+ monthly interactions.",
-    tags: ["Python", "OpenAI", "Next.js"],
-    accent: "#7B61FF",
-    year: "2025",
-  },
-  {
-    slug: "zenith-bank-portal",
-    title: "Zenith Bank Portal",
-    industry: ["FinTech", "Enterprise"],
-    outcome: "High-security treasury portal handling billion-dollar settlements.",
-    tags: ["Next.js", "Redis", "Supabase"],
-    accent: "#FF6B35",
-    year: "2024",
-  },
 ];
 
 export default function WorkPage() {
