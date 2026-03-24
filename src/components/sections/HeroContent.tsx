@@ -40,7 +40,7 @@ const stats = [
 const headlineWords = [
   { text: "Accelerating", className: "text-[#6366F1]" },
   { text: "What's", className: "text-[#F0F0FF]" },
-  { text: "Next.", className: "text-gradient-indigo full" },
+  { text: "Next.", className: "text-gradient-full" },
 ];
 
 const containerVars: Variants = {
