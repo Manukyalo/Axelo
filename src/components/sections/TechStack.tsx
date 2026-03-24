@@ -11,7 +11,7 @@ const techCategories = [
       { name: "Next.js", color: "#F0F0FF" },
       { name: "TypeScript", color: "#3178C6" },
       { name: "Framer Motion", color: "#BB4BFF" },
-      { name: "Three.js", color: "#00FFB2" },
+      { name: "Three.js", color: "#6366F1" },
     ],
   },
   {
@@ -19,7 +19,7 @@ const techCategories = [
     items: [
       { name: "Node.js", color: "#84CC16" },
       { name: "Python", color: "#FFD43B" },
-      { name: "FastAPI", color: "#00FFB2" },
+      { name: "FastAPI", color: "#6366F1" },
       { name: "GraphQL", color: "#E10098" },
       { name: "Rust", color: "#FF6B35" },
     ],
@@ -102,7 +102,7 @@ export const TechStack = memo(() => (
         transition={{ duration: 0.65 }}
         className="text-center mb-16"
       >
-        <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+        <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">
           Our Stack
         </span>
         <h2

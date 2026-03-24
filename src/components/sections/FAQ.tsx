@@ -74,7 +74,7 @@ export function FAQ() {
           transition={{ duration: 0.65 }}
           className="text-center mb-16"
         >
-          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">
             FAQ
           </span>
           <h2
@@ -106,7 +106,7 @@ export function FAQ() {
                 aria-expanded={openIndex === i}
                 className="w-full flex items-center justify-between gap-4 py-5 text-left group"
               >
-                <span className="text-[15px] font-medium text-[#F0F0FF] group-hover:text-[#00FFB2] transition-colors duration-300 leading-snug">
+                <span className="text-[15px] font-medium text-[#F0F0FF] group-hover:text-[#6366F1] transition-colors duration-300 leading-snug">
                   {item.q}
                 </span>
                 <motion.div
@@ -114,7 +114,7 @@ export function FAQ() {
                   transition={{ duration: 0.3 }}
                   className="flex-shrink-0"
                 >
-                  <ChevronDown className="w-4 h-4 text-[#8888AA] group-hover:text-[#00FFB2] transition-colors duration-300" />
+                  <ChevronDown className="w-4 h-4 text-[#8888AA] group-hover:text-[#6366F1] transition-colors duration-300" />
                 </motion.div>
               </button>
 
@@ -147,7 +147,7 @@ export function FAQ() {
           Still have questions?{" "}
           <a
             href="mailto:hello@novatechafrica.com"
-            className="text-[#00FFB2] hover:underline"
+            className="text-[#6366F1] hover:underline"
           >
             Email us directly →
           </a>

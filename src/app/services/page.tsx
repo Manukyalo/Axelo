@@ -10,7 +10,7 @@ const SERVICES_LIST = [
     title: "Web Applications",
     desc: "Lightning-fast, SEO-optimized web systems built with React, Next.js, and TypeScript for global scalability.",
     icon: Globe,
-    accent: "#00FFB2"
+    accent: "#6366F1"
   },
   {
     id: "ai-machine-learning-africa",
@@ -31,7 +31,7 @@ const SERVICES_LIST = [
     title: "ERP & CRM Systems",
     desc: "Bespoke enterprise systems to automate your workflows, inventory, and finances with absolute precision.",
     icon: Building2,
-    accent: "#00FFB2"
+    accent: "#6366F1"
   },
   {
     id: "mobile-app-development",
@@ -57,7 +57,7 @@ export default function ServicesIndex() {
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#00FFB2] mb-6 block"
+            className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#6366F1] mb-6 block"
           >
             Specializations
           </motion.span>
@@ -90,7 +90,7 @@ export default function ServicesIndex() {
                   />
                   
                   <div className="relative z-10">
-                    <div className="w-14 h-14 rounded-2xl bg-white/[0.05] flex items-center justify-center text-[#F0F0FF] group-hover:text-[#03000A] group-hover:bg-[#00FFB2] transition-all duration-500 mb-8">
+                    <div className="w-14 h-14 rounded-2xl bg-white/[0.05] flex items-center justify-center text-[#F0F0FF] group-hover:text-[#03000A] group-hover:bg-[#6366F1] transition-all duration-500 mb-8">
                       <Icon className="w-7 h-7" />
                     </div>
                     <h2 className="text-2xl font-bold text-[#F0F0FF] mb-4 tracking-tight">{service.title}</h2>

@@ -12,7 +12,7 @@ const CASE_STUDIES = {
     solution: "We built a high-performance Next.js application with a customized Firebase backend for real-time availability. The UI features cinematic transitions, glassmorphism elements, and an intuitive booking funnel designed to convert visitors into clients.",
     results: ["45% Increase in Bookings", "Zero Double-Booking Errors", "Premium Brand Positioning"],
     stack: ["Next.js", "Firebase", "Tailwind CSS", "Framer Motion", "Vercel"],
-    accent: "#00FFB2",
+    accent: "#6366F1",
     liveUrl: "https://car-clan.vercel.app/",
   },
   "hope-counseling": {
@@ -49,7 +49,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
       <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#8888AA] mb-4 block">404</span>
       <h1 className="text-5xl font-bold text-[#F0F0FF] tracking-tighter mb-4">Case Study Not Found</h1>
       <p className="text-[#8888AA] mb-10">This project may be under NDA or the link is incorrect.</p>
-      <Link href="/#work" className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-white/[0.12] text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 transition-all duration-300">
+      <Link href="/#work" className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-white/[0.12] text-[#8888AA] hover:text-[#6366F1] hover:border-[#6366F1]/30 transition-all duration-300">
         ← Back to Work
       </Link>
     </main>
@@ -58,7 +58,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
   return (
     <main className="min-h-screen pt-32 pb-20 px-6 bg-[#03000A]">
       <div className="max-w-4xl mx-auto">
-        <Link href="/#work" className="inline-flex items-center gap-2 text-[#8888AA] hover:text-[#00FFB2] transition-colors mb-12 group">
+        <Link href="/#work" className="inline-flex items-center gap-2 text-[#8888AA] hover:text-[#6366F1] transition-colors mb-12 group">
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Work
         </Link>
 
@@ -97,7 +97,7 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
 
           <div className="space-y-12">
             <section>
-              <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-[#00FFB2] mb-6">Results</h2>
+              <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-[#6366F1] mb-6">Results</h2>
               <div className="space-y-6">
                 {study.results.map((res, i) => (
                   <div key={i} className="glass p-5 rounded-2xl border border-white/[0.08]">

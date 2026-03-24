@@ -6,7 +6,7 @@ import { ArrowRight, Clock, Calendar } from "lucide-react";
 import type { PostMeta } from "@/lib/mdx";
 
 const ACCENT_COLORS: Record<string, string> = {
-  "AI & ML": "#00FFB2",
+  "AI & ML": "#6366F1",
   Engineering: "#7B61FF",
   Product: "#FF6B35",
 };
@@ -28,7 +28,7 @@ export function BlogIndexClient({ posts }: { posts: PostMeta[] }) {
           transition={{ duration: 0.7 }}
           className="max-w-3xl"
         >
-          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-6 block">
+          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-6 block">
             Insights & News
           </span>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.05]">
@@ -45,7 +45,7 @@ export function BlogIndexClient({ posts }: { posts: PostMeta[] }) {
       {/* Card Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
         {posts.map((post, i) => {
-          const accent = ACCENT_COLORS[post.category] ?? "#00FFB2";
+          const accent = ACCENT_COLORS[post.category] ?? "#6366F1";
           return (
             <motion.article
               key={post.slug}
@@ -74,7 +74,7 @@ export function BlogIndexClient({ posts }: { posts: PostMeta[] }) {
               </div>
 
               {/* Title */}
-              <h2 className="text-xl font-bold mb-4 group-hover:text-[#00FFB2] transition-colors duration-300 leading-snug flex-grow">
+              <h2 className="text-xl font-bold mb-4 group-hover:text-[#6366F1] transition-colors duration-300 leading-snug flex-grow">
                 {post.title}
               </h2>
 
@@ -95,7 +95,7 @@ export function BlogIndexClient({ posts }: { posts: PostMeta[] }) {
                 </span>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-[#8888AA] hover:text-[#00FFB2] transition-colors duration-300 group/link"
+                  className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300 group/link"
                   aria-label={`Read article: ${post.title}`}
                 >
                   Read Article
@@ -109,7 +109,7 @@ export function BlogIndexClient({ posts }: { posts: PostMeta[] }) {
 
       {/* Newsletter CTA */}
       <section className="glass rounded-[40px] p-12 md:p-20 border border-white/[0.08] text-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-[#00FFB2]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-[#6366F1]/5 blur-[120px] pointer-events-none" />
         <div className="max-w-xl mx-auto relative z-10">
           <h2 className="text-3xl font-bold mb-4">Stay Ahead of the Curve</h2>
           <p className="text-[#8888AA] mb-10 text-sm leading-relaxed">
@@ -120,9 +120,9 @@ export function BlogIndexClient({ posts }: { posts: PostMeta[] }) {
             <input
               type="email"
               placeholder="your@email.com"
-              className="flex-grow bg-black/40 border border-white/[0.1] focus:border-[#00FFB2]/40 rounded-xl px-6 py-4 outline-none text-[#F0F0FF] placeholder:text-[#8888AA]"
+              className="flex-grow bg-black/40 border border-white/[0.1] focus:border-[#6366F1]/40 rounded-xl px-6 py-4 outline-none text-[#F0F0FF] placeholder:text-[#8888AA]"
             />
-            <button className="px-8 py-4 bg-[#F0F0FF] text-[#03000A] font-bold tracking-widest uppercase hover:bg-[#00FFB2] transition-all duration-300 rounded-xl whitespace-nowrap">
+            <button className="px-8 py-4 bg-[#F0F0FF] text-[#03000A] font-bold tracking-widest uppercase hover:bg-[#6366F1] transition-all duration-300 rounded-xl whitespace-nowrap">
               Subscribe
             </button>
           </div>

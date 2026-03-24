@@ -19,8 +19,8 @@ const testimonials = [
     company: "FreightLink East Africa",
     country: "Kenya 🇰🇪",
     initials: "JO",
-    accent: "#00FFB2",
-    gradient: "from-[#00FFB2] to-[#7B61FF]",
+    accent: "#6366F1",
+    gradient: "from-[#6366F1] to-[#7B61FF]",
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ const testimonials = [
     country: "Kenya 🇰🇪",
     initials: "JM",
     accent: "#F5A623",
-    gradient: "from-[#F5A623] to-[#00FFB2]",
+    gradient: "from-[#F5A623] to-[#6366F1]",
   },
 ];
 
@@ -85,7 +85,7 @@ export function Testimonials() {
           transition={{ duration: 0.65 }}
           className="text-center mb-16"
         >
-          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">
             Client Stories
           </span>
           <h2
@@ -152,7 +152,7 @@ export function Testimonials() {
               <button
                 onClick={() => advance(-1)}
                 aria-label="Previous testimonial"
-                className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 transition-all duration-300"
+                className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#6366F1] hover:border-[#6366F1]/30 transition-all duration-300"
               >
                 ←
               </button>
@@ -184,7 +184,7 @@ export function Testimonials() {
               <button
                 onClick={() => advance(1)}
                 aria-label="Next testimonial"
-                className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 transition-all duration-300"
+                className="w-10 h-10 rounded-full glass border border-white/[0.08] flex items-center justify-center text-[#8888AA] hover:text-[#6366F1] hover:border-[#6366F1]/30 transition-all duration-300"
               >
                 →
               </button>

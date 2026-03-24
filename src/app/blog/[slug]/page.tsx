@@ -68,7 +68,7 @@ const mdxComponents = {
     <strong className="font-semibold text-[#F0F0FF]" {...props} />
   ),
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-    <a className="text-[#00FFB2] hover:underline underline-offset-4" {...props} />
+    <a className="text-[#6366F1] hover:underline underline-offset-4" {...props} />
   ),
   hr: () => <hr className="border-white/[0.08] my-10" />,
   table: (props: React.HTMLAttributes<HTMLTableElement>) => (
@@ -83,10 +83,10 @@ const mdxComponents = {
     <td className="px-4 py-3 text-[#CCCCDD] border border-white/[0.06]" {...props} />
   ),
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
-    <blockquote className="border-l-4 border-[#00FFB2]/40 pl-5 italic text-[#8888AA] my-6" {...props} />
+    <blockquote className="border-l-4 border-[#6366F1]/40 pl-5 italic text-[#8888AA] my-6" {...props} />
   ),
   code: (props: React.HTMLAttributes<HTMLElement>) => (
-    <code className="bg-white/[0.06] text-[#00FFB2] px-1.5 py-0.5 rounded font-mono text-[13px]" {...props} />
+    <code className="bg-white/[0.06] text-[#6366F1] px-1.5 py-0.5 rounded font-mono text-[13px]" {...props} />
   ),
 };
 

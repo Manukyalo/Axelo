@@ -57,7 +57,7 @@ interface ArticleShellProps {
 }
 
 export function ArticleShell({ post, related, children }: ArticleShellProps) {
-  const accent = ACCENT_COLORS[post.category] ?? "#00FFB2";
+  const accent = ACCENT_COLORS[post.category] ?? "#6366F1";
 
   return (
     <main className="pt-28 pb-32 px-6">
@@ -65,7 +65,7 @@ export function ArticleShell({ post, related, children }: ArticleShellProps) {
       <div className="max-w-3xl mx-auto mb-10">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[#8888AA] hover:text-[#00FFB2] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[12px] font-mono uppercase tracking-widest text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300"
         >
           <ArrowLeft className="w-3 h-3" /> All Articles
         </Link>
@@ -128,8 +128,8 @@ export function ArticleShell({ post, related, children }: ArticleShellProps) {
         transition={{ duration: 0.6 }}
         className="max-w-3xl mx-auto mt-16"
       >
-        <div className="glass rounded-3xl p-10 md:p-14 border border-[#00FFB2]/20 relative overflow-hidden text-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#00FFB2]/5 to-transparent pointer-events-none" />
+        <div className="glass rounded-3xl p-10 md:p-14 border border-[#6366F1]/20 relative overflow-hidden text-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 to-transparent pointer-events-none" />
           <div className="relative z-10">
             <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">
               Work With Us
@@ -158,7 +158,7 @@ export function ArticleShell({ post, related, children }: ArticleShellProps) {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {related.map((rel) => {
-              const relAccent = ACCENT_COLORS[rel.category] ?? "#00FFB2";
+              const relAccent = ACCENT_COLORS[rel.category] ?? "#6366F1";
               return (
                 <Link
                   key={rel.slug}
@@ -171,7 +171,7 @@ export function ArticleShell({ post, related, children }: ArticleShellProps) {
                   >
                     {rel.category}
                   </span>
-                  <h3 className="text-[15px] font-semibold text-[#F0F0FF] group-hover:text-[#00FFB2] transition-colors duration-300 leading-snug mb-2">
+                  <h3 className="text-[15px] font-semibold text-[#F0F0FF] group-hover:text-[#6366F1] transition-colors duration-300 leading-snug mb-2">
                     {rel.title}
                   </h3>
                   <span className="text-[11px] font-mono text-[#8888AA] flex items-center gap-1.5">

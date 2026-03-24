@@ -11,7 +11,7 @@ const VALUES = [
     title: "Engineering Excellence",
     desc: "We don&apos;t settle for &apos;good enough&apos;. Every line of code is optimized, every pixel is intentional, and every architecture is built to withstand enterprise loads.",
     icon: Code2,
-    accent: "#00FFB2",
+    accent: "#6366F1",
   },
   {
     title: "Global Vision",
@@ -29,7 +29,7 @@ const VALUES = [
     title: "Elite Talent",
     desc: "Our team consists of the top 1% of engineering and design talent in the region, bringing together years of experience in high-growth startups and enterprises.",
     icon: Users,
-    accent: "#00FFB2",
+    accent: "#6366F1",
   },
 ];
 
@@ -94,10 +94,10 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="glass rounded-3xl p-10 border border-white/[0.08] relative aspect-square lg:aspect-video flex items-center justify-center overflow-hidden"
            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#00FFB2]/5 via-[#7B61FF]/5 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 via-[#7B61FF]/5 to-transparent" />
               <div className="relative text-center">
-                 <div className="w-20 h-20 rounded-2xl bg-[#00FFB2]/10 border border-[#00FFB2]/20 flex items-center justify-center mx-auto mb-6">
-                    <Code2 className="w-10 h-10 text-[#00FFB2]" />
+                 <div className="w-20 h-20 rounded-2xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mx-auto mb-6">
+                    <Code2 className="w-10 h-10 text-[#6366F1]" />
                  </div>
                  <p className="text-[12px] font-mono tracking-widest text-[#8888AA] uppercase">Built for Enterprises</p>
               </div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
         {/* Values */}
         <section className="mb-40">
            <div className="text-center mb-20">
-              <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">Our Values</span>
+              <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">Our Values</span>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">The Principles That <br /> <span className="text-gradient-full">Drive Us Forward</span></h2>
            </div>
            
@@ -139,12 +139,12 @@ export default function AboutPage() {
 
         {/* Join our team CTA */}
         <section className="text-center py-24 glass rounded-[40px] border border-white/[0.1] relative overflow-hidden group">
-           <div className="absolute inset-0 bg-gradient-to-br from-[#00FFB2]/5 via-transparent to-transparent pointer-events-none" />
+           <div className="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 via-transparent to-transparent pointer-events-none" />
            <h2 className="text-4xl md:text-5xl font-bold mb-8 relative z-10">We&apos;re Always Looking For <br /> <span className="text-gradient-indigo">Exceptional Talent</span></h2>
            <p className="text-[#8888AA] text-lg max-w-xl mx-auto mb-12 relative z-10">
               Join a team of elite engineers and designers building the next generation of digital products.
            </p>
-           <Link href="/contact" className="inline-flex items-center gap-2 text-[#00FFB2] font-bold tracking-[0.2em] uppercase text-sm hover:gap-4 transition-all duration-300 relative z-10">
+           <Link href="/contact" className="inline-flex items-center gap-2 text-[#6366F1] font-bold tracking-[0.2em] uppercase text-sm hover:gap-4 transition-all duration-300 relative z-10">
               View Open Positions <ArrowRight className="w-4 h-4" />
            </Link>
         </section>

@@ -142,13 +142,13 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
   return (
     <main className="min-h-screen pt-32 pb-20 px-6 bg-[#03000A]">
       <div className="max-w-4xl mx-auto">
-        <Link href="/services" className="inline-flex items-center gap-2 text-[#8888AA] hover:text-[#00FFB2] transition-colors mb-12 group">
+        <Link href="/services" className="inline-flex items-center gap-2 text-[#8888AA] hover:text-[#6366F1] transition-colors mb-12 group">
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Services
         </Link>
 
         {/* Hero */}
         <div className="mb-20">
-          <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#00FFB2] mb-6 block">
+          <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#6366F1] mb-6 block">
             {service.title} in Africa
           </span>
           <h1 className="text-5xl md:text-7xl font-bold text-[#F0F0FF] tracking-tighter mb-8 leading-[1.1]">
@@ -159,7 +159,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           </p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gradient-to-r from-[#00FFB2] to-[#7B61FF] text-[#03000A] font-bold text-sm tracking-widest uppercase hover:shadow-[0_0_30px_rgba(0,255,178,0.3)] transition-all duration-500"
+            className="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gradient-to-r from-[#6366F1] to-[#7B61FF] text-[#03000A] font-bold text-sm tracking-widest uppercase hover:shadow-[0_0_30px_rgba(0,255,178,0.3)] transition-all duration-500"
           >
             Start a Project <ArrowUpRight className="w-4 h-4" />
           </Link>
@@ -171,8 +171,8 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
             <h3 className="text-[#F0F0FF] text-xl font-bold mb-6">The Challenge</h3>
             <p className="text-[#8888AA] leading-relaxed italic">&ldquo;{service.challenge}&rdquo;</p>
           </div>
-          <div className="glass p-10 rounded-[2.5rem] border border-[#00FFB2]/20 bg-[#00FFB2]/5">
-            <h3 className="text-[#00FFB2] text-xl font-bold mb-6">Our Approach</h3>
+          <div className="glass p-10 rounded-[2.5rem] border border-[#6366F1]/20 bg-[#6366F1]/5">
+            <h3 className="text-[#6366F1] text-xl font-bold mb-6">Our Approach</h3>
             <p className="text-[#CCCCEE] leading-relaxed">{service.approach}</p>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.deliverables.map(item => (
               <div key={item} className="flex items-start gap-4 p-6 bg-white/[0.02] border border-white/[0.05] rounded-2xl">
-                <CheckCircle2 className="w-5 h-5 text-[#00FFB2] mt-1 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-[#6366F1] mt-1 flex-shrink-0" />
                 <span className="text-[#CCCCEE] text-[15px]">{item}</span>
               </div>
             ))}
@@ -195,7 +195,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           <h2 className="text-3xl font-bold text-[#F0F0FF] mb-12">Engineered With</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {service.tech.map(t => (
-              <span key={t} className="px-6 py-3 rounded-full bg-white/[0.03] border border-white/10 text-sm font-mono text-[#8888AA] hover:text-[#F0F0FF] hover:border-[#00FFB2]/30 hover:bg-[#00FFB2]/5 transition-all duration-300">
+              <span key={t} className="px-6 py-3 rounded-full bg-white/[0.03] border border-white/10 text-sm font-mono text-[#8888AA] hover:text-[#F0F0FF] hover:border-[#6366F1]/30 hover:bg-[#6366F1]/5 transition-all duration-300">
                 {t}
               </span>
             ))}
@@ -210,7 +210,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
               <details key={i} className="glass rounded-2xl border border-white/[0.08] group transition-all duration-300">
                 <summary className="p-6 cursor-pointer list-none flex items-center justify-between text-[#F0F0FF] font-medium text-lg">
                   {item.q}
-                  <span className="text-[#00FFB2] transition-transform group-open:rotate-180">↓</span>
+                  <span className="text-[#6366F1] transition-transform group-open:rotate-180">↓</span>
                 </summary>
                 <div className="px-6 pb-6 text-[#8888AA] leading-relaxed border-t border-white/[0.05] pt-4">
                   {item.a}
@@ -229,7 +229,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
           <p className="text-[#8888AA] text-lg mb-10 relative z-10">Book a free 30-min consultation to discuss your project scope.</p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center gap-3 px-12 py-5 rounded-full bg-white text-[#03000A] font-bold text-sm tracking-widest uppercase hover:bg-[#00FFB2] transition-all duration-500 relative z-10"
+            className="inline-flex items-center gap-3 px-12 py-5 rounded-full bg-white text-[#03000A] font-bold text-sm tracking-widest uppercase hover:bg-[#6366F1] transition-all duration-500 relative z-10"
           >
             Schedule Call <ArrowUpRight className="w-5 h-5" />
           </Link>

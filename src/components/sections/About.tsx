@@ -28,7 +28,7 @@ const stats = [
   { value: "20+", label: "Engineers & Designers", accent: "#6366F1" },
   { value: "5", label: "Countries Served", accent: "#7B61FF" },
   { value: "50+", label: "Enterprise Projects", accent: "#FF6B35" },
-  { value: "98%", label: "Client Retention", accent: "#00FFB2" },
+  { value: "98%", label: "Client Retention", accent: "#6366F1" },
 ];
 
 export const About = memo(() => (
@@ -38,7 +38,7 @@ export const About = memo(() => (
     aria-labelledby="about-heading"
   >
     {/* Ambient glows */}
-    <div className="absolute top-1/2 left-0 w-80 h-80 -translate-y-1/2 rounded-full bg-[#00FFB2]/4 blur-[120px] pointer-events-none" />
+    <div className="absolute top-1/2 left-0 w-80 h-80 -translate-y-1/2 rounded-full bg-[#6366F1]/4 blur-[120px] pointer-events-none" />
     <div className="absolute top-1/2 right-0 w-80 h-80 -translate-y-1/2 rounded-full bg-[#7B61FF]/4 blur-[120px] pointer-events-none" />
 
     <div className="max-w-7xl mx-auto">
@@ -150,7 +150,7 @@ export const About = memo(() => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="glass rounded-2xl p-6 border border-[#00FFB2]/15"
+            className="glass rounded-2xl p-6 border border-[#6366F1]/15"
           >
             <p className="text-[#8888AA] text-[13px] leading-relaxed mb-4">
               Ready to build the next chapter of your digital journey with a team
@@ -160,7 +160,7 @@ export const About = memo(() => (
               onClick={() =>
                 document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
               }
-              className="text-[13px] font-semibold text-[#00FFB2] hover:gap-3 flex items-center gap-2 transition-all duration-300"
+              className="text-[13px] font-semibold text-[#6366F1] hover:gap-3 flex items-center gap-2 transition-all duration-300"
             >
               Start a conversation →
             </button>

@@ -49,10 +49,10 @@ function Particles({
 
     // Mint / violet / white color mix
     const palette = [
-      new THREE.Color("#00FFB2"),
+      new THREE.Color("#6366F1"),
       new THREE.Color("#7B61FF"),
       new THREE.Color("#F0F0FF"),
-      new THREE.Color("#00FFB2"),
+      new THREE.Color("#6366F1"),
     ];
 
     for (let i = 0; i < count; i++) {
@@ -154,7 +154,7 @@ function ConstellationLines({ positions }: { positions: Float32Array }) {
       <bufferGeometry attach="geometry" {...lineGeo} />
       <lineBasicMaterial
         attach="material"
-        color="#00FFB2"
+        color="#6366F1"
         transparent
         opacity={0.08}
         blending={THREE.AdditiveBlending}

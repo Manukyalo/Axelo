@@ -55,7 +55,7 @@ export function CustomCursor() {
     <>
       {/* Large Ring */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#00FFB2]/30 pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#6366F1]/30 pointer-events-none z-[9999] mix-blend-difference"
         style={{
           x: cursorX,
           y: cursorY,
@@ -67,7 +67,7 @@ export function CustomCursor() {
       />
       {/* Small Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-[#00FFB2] pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-[#6366F1] pointer-events-none z-[9999]"
         style={{
           x: cursorX,
           y: cursorY,

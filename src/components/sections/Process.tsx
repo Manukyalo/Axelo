@@ -10,7 +10,7 @@ const phases = [
     timeline: "Week 1–2",
     description:
       "Deep-dive into your business, users, and competitive landscape. We define scope, technical architecture, and a measurable success criteria — so everyone builds toward the same north star.",
-    accent: "#00FFB2",
+    accent: "#6366F1",
   },
   {
     number: "02",
@@ -26,7 +26,7 @@ const phases = [
     timeline: "Week 3–10",
     description:
       "Agile sprints, weekly demos, CI/CD pipelines from day one. Every feature is code-reviewed, tested, and deployed to a staging environment for your approval before going live.",
-    accent: "#00FFB2",
+    accent: "#6366F1",
   },
   {
     number: "04",
@@ -64,7 +64,7 @@ export function Process() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">
             Our Method
           </span>
           <h2
@@ -87,7 +87,7 @@ export function Process() {
               className="absolute top-0 left-0 h-full"
               style={{
                 width: lineWidth,
-                background: "linear-gradient(90deg, #00FFB2, #7B61FF, #FF6B35)",
+                background: "linear-gradient(90deg, #6366F1, #7B61FF, #FF6B35)",
               }}
             />
           </div>

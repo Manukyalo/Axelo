@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Engineers & Designers", value: "20+", accent: "#00FFB2" },
+  { label: "Engineers & Designers", value: "20+", accent: "#6366F1" },
   { label: "Industries Served", value: "12", accent: "#7B61FF" },
   { label: "Years Building", value: "4", accent: "#FF6B35" },
 ];

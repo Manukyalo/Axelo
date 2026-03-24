@@ -24,7 +24,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   }, [inView, to]);
 
   return (
-    <span ref={ref} className="font-mono text-[#00FFB2]">
+    <span ref={ref} className="font-mono text-[#6366F1]">
       {count}{suffix}
     </span>
   );
@@ -134,7 +134,7 @@ export function HeroContent() {
           {/* Primary CTA */}
           <a
             href="#contact"
-            className="relative h-[52px] px-10 flex items-center justify-center rounded-full font-bold text-sm tracking-[0.15em] uppercase text-[#03000A] bg-gradient-to-r from-[#00FFB2] via-[#7B61FF] to-[#FF6B35] group transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,255,178,0.4)]"
+            className="relative h-[52px] px-10 flex items-center justify-center rounded-full font-bold text-sm tracking-[0.15em] uppercase text-[#03000A] bg-gradient-to-r from-[#6366F1] via-[#7B61FF] to-[#FF6B35] group transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,255,178,0.4)]"
           >
             <span className="relative z-10">Start a Project</span>
           </a>
@@ -142,7 +142,7 @@ export function HeroContent() {
           {/* Ghost CTA */}
           <a
             href="#work"
-            className="h-[52px] px-10 flex items-center justify-center rounded-full font-bold text-sm tracking-[0.15em] uppercase text-[#F0F0FF] border border-white/15 hover:border-[#00FFB2]/40 hover:bg-[#00FFB2]/5 transition-all duration-500 flex gap-2"
+            className="h-[52px] px-10 flex items-center justify-center rounded-full font-bold text-sm tracking-[0.15em] uppercase text-[#F0F0FF] border border-white/15 hover:border-[#6366F1]/40 hover:bg-[#6366F1]/5 transition-all duration-500 flex gap-2"
           >
             View Our Work <span className="text-[#8888AA] transition-transform group-hover:translate-y-1">↓</span>
           </a>
@@ -189,7 +189,7 @@ export function HeroContent() {
         aria-label="Scroll down"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 group cursor-pointer"
       >
-        <span className="text-[10px] text-[#8888AA] tracking-[0.25em] uppercase font-mono group-hover:text-[#00FFB2] transition-colors duration-300">
+        <span className="text-[10px] text-[#8888AA] tracking-[0.25em] uppercase font-mono group-hover:text-[#6366F1] transition-colors duration-300">
           Scroll
         </span>
         <div className="flex flex-col items-center gap-0.5">

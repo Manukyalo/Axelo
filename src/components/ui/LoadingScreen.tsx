@@ -27,10 +27,10 @@ export function LoadingScreen() {
               initial={{ scale: 0.8, opacity: 0, rotate: -45 }}
               animate={{ scale: 1, opacity: 1, rotate: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#00FFB2] via-[#7B61FF] to-[#FF6B35] flex items-center justify-center shadow-[0_0_50px_rgba(0,255,178,0.3)]"
+              className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#6366F1] via-[#7B61FF] to-[#FF6B35] flex items-center justify-center shadow-[0_0_50px_rgba(0,255,178,0.3)]"
             >
               <div className="w-12 h-12 bg-[#03000A] rounded-xl rotate-45 flex items-center justify-center">
-                <div className="w-full h-full bg-gradient-to-br from-[#00FFB2] to-[#7B61FF] opacity-80" />
+                <div className="w-full h-full bg-gradient-to-br from-[#6366F1] to-[#7B61FF] opacity-80" />
               </div>
             </motion.div>
 
@@ -42,14 +42,14 @@ export function LoadingScreen() {
                className="text-center"
             >
                <h2 className="text-2xl font-bold text-[#F0F0FF] tracking-tighter uppercase mb-2">
-                 Nova Tech <span className="text-[#00FFB2]">Africa</span>
+                 Nova Tech <span className="text-[#6366F1]">Africa</span>
                </h2>
                <div className="w-48 h-px bg-white/10 relative overflow-hidden mx-auto">
                  <motion.div 
                    initial={{ x: "-100%" }}
                    animate={{ x: "100%" }}
                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                   className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00FFB2] to-transparent"
+                   className="absolute inset-0 bg-gradient-to-r from-transparent via-[#6366F1] to-transparent"
                  />
                </div>
             </motion.div>

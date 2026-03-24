@@ -12,9 +12,9 @@ const caseStudies = [
     result:
       "A premium car rental and management platform for a high-end fleet in Kenya. Features real-time booking, automated invoicing, and fleet tracking.",
     stack: ["Next.js", "Firebase", "Tailwind CSS", "Framer Motion"],
-    accent: "#00FFB2",
+    accent: "#6366F1",
     year: "2026",
-    gradient: "from-[#00FFB2]/10 via-[#7B61FF]/5 to-transparent",
+    gradient: "from-[#6366F1]/10 via-[#7B61FF]/5 to-transparent",
     liveUrl: "https://car-clan.vercel.app/",
   },
   {
@@ -38,7 +38,7 @@ const caseStudies = [
     stack: ["React", "Vite", "Firebase", "Tailwind CSS", "Vercel"],
     accent: "#F5A623",
     year: "2026",
-    gradient: "from-[#F5A623]/10 via-[#00FFB2]/5 to-transparent",
+    gradient: "from-[#F5A623]/10 via-[#6366F1]/5 to-transparent",
     liveUrl: "https://eastern-vacations-system.vercel.app/",
   },
 ];
@@ -192,7 +192,7 @@ const CaseStudyCard = memo(
       <div className="flex flex-col sm:flex-row gap-3 mt-6">
         <a 
           href={`/work/${study.id}`}
-          className="flex-1 px-6 py-3 rounded-xl bg-white/[0.05] border border-white/[0.1] text-[#F0F0FF] text-[13px] font-semibold text-center hover:bg-[#00FFB2]/10 hover:border-[#00FFB2]/30 transition-all duration-300"
+          className="flex-1 px-6 py-3 rounded-xl bg-white/[0.05] border border-white/[0.1] text-[#F0F0FF] text-[13px] font-semibold text-center hover:bg-[#6366F1]/10 hover:border-[#6366F1]/30 transition-all duration-300"
         >
           Read Case Study
         </a>
@@ -240,7 +240,7 @@ export const Portfolio = memo(() => (
         className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6"
       >
         <div>
-          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">
             Selected Work
           </span>
           <h2
@@ -254,7 +254,7 @@ export const Portfolio = memo(() => (
             A curated selection of our highest-impact engineering projects.
           </p>
         </div>
-        <button className="hidden md:flex items-center gap-2 text-[#8888AA] hover:text-[#00FFB2] transition-colors text-sm font-medium group">
+        <button className="hidden md:flex items-center gap-2 text-[#8888AA] hover:text-[#6366F1] transition-colors text-sm font-medium group">
           View All Projects
           <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
         </button>
@@ -274,7 +274,7 @@ export const Portfolio = memo(() => (
         transition={{ duration: 0.5, delay: 0.3 }}
         className="mt-14 text-center"
       >
-        <button className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/[0.12] text-[#8888AA] hover:text-[#00FFB2] hover:border-[#00FFB2]/30 text-sm font-medium transition-all duration-300">
+        <button className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/[0.12] text-[#8888AA] hover:text-[#6366F1] hover:border-[#6366F1]/30 text-sm font-medium transition-all duration-300">
           View All Projects <ArrowUpRight className="w-4 h-4" />
         </button>
       </motion.div>

@@ -17,7 +17,7 @@ export default function ContactPage() {
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8 }}
            >
-              <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-6 block">Contact Us</span>
+              <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-6 block">Contact Us</span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[1.1]">
                  Let&apos;s Build the <br /> <span className="text-gradient-full">Future Together</span>
               </h1>
@@ -37,8 +37,8 @@ export default function ContactPage() {
                  <div className="absolute inset-0 bg-[#03000A]/40 z-10" />
                  {/* This would be an iframe for Google Maps or similar */}
                  <div className="relative z-20">
-                    <div className="w-16 h-16 rounded-2xl bg-[#00FFB2]/10 border border-[#00FFB2]/20 flex items-center justify-center mx-auto mb-6">
-                       <MapPin className="w-8 h-8 text-[#00FFB2]" />
+                    <div className="w-16 h-16 rounded-2xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mx-auto mb-6">
+                       <MapPin className="w-8 h-8 text-[#6366F1]" />
                     </div>
                     <p className="text-2xl font-bold mb-2">Our Nairobi HQ</p>
                     <p className="text-[#8888AA]">Westlands Business Park, Nairobi, Kenya</p>
@@ -50,7 +50,7 @@ export default function ContactPage() {
                  <p className="text-[#8888AA] text-sm mb-6 leading-relaxed">To help us prepare for our first call, please consider having the following ready:</p>
                  <ul className="space-y-4 text-sm text-[#F0F0FF]/80">
                     <li className="flex items-center gap-3">
-                       <div className="w-1.5 h-1.5 rounded-full bg-[#00FFB2]" />
+                       <div className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
                        Core business objective
                     </li>
                     <li className="flex items-center gap-3">
@@ -62,7 +62,7 @@ export default function ContactPage() {
                        Preferred launch timeline
                     </li>
                     <li className="flex items-center gap-3">
-                       <div className="w-1.5 h-1.5 rounded-full bg-[#00FFB2]" />
+                       <div className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
                        Key features / MVP scope
                     </li>
                     <li className="flex items-center gap-3">

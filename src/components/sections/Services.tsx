@@ -9,7 +9,7 @@ const services = [
     title: "Web Applications",
     description:
       "We architect lightning-fast, SEO-optimized web applications using React, Next.js, and TypeScript — built to handle millions of users with zero downtime.",
-    accent: "#00FFB2",
+    accent: "#6366F1",
     tag: "Full-Stack",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
@@ -40,7 +40,7 @@ const services = [
     title: "SaaS Platforms",
     description:
       "Multi-tenant SaaS architectures engineered for global scale — with robust auth, billing integration, analytics dashboards, and API-first design.",
-    accent: "#00FFB2",
+    accent: "#6366F1",
     tag: "Cloud Native",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
@@ -159,7 +159,7 @@ export const Services = memo(() => (
     id="services"
     aria-labelledby="services-heading"
   >
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-[#00FFB2]/40 to-transparent" />
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-[#6366F1]/40 to-transparent" />
 
     <div className="max-w-7xl mx-auto">
       <motion.div
@@ -169,7 +169,7 @@ export const Services = memo(() => (
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         className="text-center mb-20"
       >
-        <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#00FFB2] mb-4 block">
+        <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-[#6366F1] mb-4 block">
           Core Capabilities
         </span>
         <h2

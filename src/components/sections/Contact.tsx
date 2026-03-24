@@ -106,7 +106,7 @@ export function Contact() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#00FFB2] mb-4 block"
+            className="font-mono text-[11px] tracking-[0.3em] uppercase text-[#6366F1] mb-4 block"
           >
             Project Inquiry
           </motion.span>
@@ -130,8 +130,8 @@ export function Contact() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center justify-center py-12 text-center h-full flex-1"
               >
-                <div className="w-20 h-20 rounded-full bg-[#00FFB2]/10 border border-[#00FFB2]/30 flex items-center justify-center mb-8">
-                  <CheckCircle2 className="w-10 h-10 text-[#00FFB2]" />
+                  <div className="w-20 h-20 rounded-full bg-[#6366F1]/10 border border-[#6366F1]/30 flex items-center justify-center mb-8">
+                  <CheckCircle2 className="w-10 h-10 text-[#6366F1]" />
                 </div>
                 <h3 className="text-3xl font-bold text-[#F0F0FF] mb-4">Brief Received!</h3>
                 <p className="text-[#8888AA] text-lg max-w-md mx-auto leading-relaxed mb-8">
@@ -141,7 +141,7 @@ export function Contact() {
                 </p>
                 <button 
                   onClick={() => { setIsSuccess(false); setStep(1); setFormData({ ...formData, projectTypes: [] }); }}
-                  className="text-sm font-mono uppercase tracking-widest text-[#00FFB2] hover:underline"
+                  className="text-sm font-mono uppercase tracking-widest text-[#6366F1] hover:underline"
                 >
                   Send another brief
                 </button>
@@ -160,7 +160,7 @@ export function Contact() {
                   </div>
                   <div className="h-1 bg-white/[0.05] rounded-full overflow-hidden">
                     <motion.div 
-                      className="h-full bg-gradient-to-r from-[#00FFB2] to-[#7B61FF]"
+                      className="h-full bg-gradient-to-r from-[#6366F1] to-[#7B61FF]"
                       initial={{ width: "33.33%" }}
                       animate={{ width: `${(step / 3) * 100}%` }}
                       transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -194,12 +194,12 @@ export function Contact() {
                                   onClick={() => toggleProjectType(type.label)}
                                   className={`flex flex-col items-center justify-center p-6 rounded-2xl border transition-all duration-300 gap-4 group ${
                                     isSelected 
-                                      ? "bg-[#00FFB2]/10 border-[#00FFB2]/40" 
+                                      ? "bg-[#6366F1]/10 border-[#6366F1]/40" 
                                       : "bg-white/[0.02] border-white/[0.06] hover:border-white/20"
                                   }`}
                                 >
                                   <div className={`p-3 rounded-xl transition-colors duration-300 ${
-                                    isSelected ? "bg-[#00FFB2]/20 text-[#00FFB2]" : "bg-white/[0.05] text-[#8888AA] group-hover:text-[#F0F0FF]"
+                                    isSelected ? "bg-[#6366F1]/20 text-[#6366F1]" : "bg-white/[0.05] text-[#8888AA] group-hover:text-[#F0F0FF]"
                                   }`}>
                                     <Icon className="w-6 h-6" />
                                   </div>
@@ -235,7 +235,7 @@ export function Contact() {
                                 <select 
                                   value={formData.budget}
                                   onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                                  className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-4 py-4 text-[#F0F0FF] outline-none appearance-none cursor-pointer focus:border-[#00FFB2]/40 transition-colors"
+                                  className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-4 py-4 text-[#F0F0FF] outline-none appearance-none cursor-pointer focus:border-[#6366F1]/40 transition-colors"
                                 >
                                   {BUDGET_OPTIONS.map(opt => <option key={opt} value={opt} className="bg-[#0D0D1A]">{opt}</option>)}
                                 </select>
@@ -251,7 +251,7 @@ export function Contact() {
                                 <select 
                                   value={formData.timeline}
                                   onChange={(e) => setFormData({...formData, timeline: e.target.value})}
-                                  className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-4 py-4 text-[#F0F0FF] outline-none appearance-none cursor-pointer focus:border-[#00FFB2]/40 transition-colors"
+                                  className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-4 py-4 text-[#F0F0FF] outline-none appearance-none cursor-pointer focus:border-[#6366F1]/40 transition-colors"
                                 >
                                   {TIMELINE_OPTIONS.map(opt => <option key={opt} value={opt} className="bg-[#0D0D1A]">{opt}</option>)}
                                 </select>
@@ -269,7 +269,7 @@ export function Contact() {
                               value={formData.description}
                               onChange={(e) => setFormData({...formData, description: e.target.value})}
                               placeholder="Tell us what problem you're trying to solve..."
-                              className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#00FFB2]/40 transition-colors resize-none placeholder:text-white/10"
+                              className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#6366F1]/40 transition-colors resize-none placeholder:text-white/10"
                             />
                           </div>
                         </motion.div>
@@ -295,7 +295,7 @@ export function Contact() {
                                 value={formData.fullName}
                                 onChange={(e) => setFormData({...formData, fullName: e.target.value})}
                                 placeholder="John Doe"
-                                className={`w-full bg-white/[0.03] border ${errors.fullName ? 'border-red-500/50' : 'border-white/[0.1]'} rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#00FFB2]/40 transition-all`}
+                                className={`w-full bg-white/[0.03] border ${errors.fullName ? 'border-red-500/50' : 'border-white/[0.1]'} rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#6366F1]/40 transition-all`}
                               />
                             </div>
                             <div className="space-y-2">
@@ -307,7 +307,7 @@ export function Contact() {
                                 value={formData.email}
                                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                                 placeholder="john@company.com"
-                                className={`w-full bg-white/[0.03] border ${errors.email ? 'border-red-500/50' : 'border-white/[0.1]'} rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#00FFB2]/40 transition-all`}
+                                className={`w-full bg-white/[0.03] border ${errors.email ? 'border-red-500/50' : 'border-white/[0.1]'} rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#6366F1]/40 transition-all`}
                               />
                             </div>
                           </div>
@@ -322,7 +322,7 @@ export function Contact() {
                                 value={formData.company}
                                 onChange={(e) => setFormData({...formData, company: e.target.value})}
                                 placeholder="Global Enterprises"
-                                className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#00FFB2]/40 transition-all"
+                                className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#6366F1]/40 transition-all"
                               />
                             </div>
                             <div className="space-y-2">
@@ -333,7 +333,7 @@ export function Contact() {
                                 <select 
                                   value={formData.country}
                                   onChange={(e) => setFormData({...formData, country: e.target.value})}
-                                  className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none appearance-none cursor-pointer focus:border-[#00FFB2]/40"
+                                  className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none appearance-none cursor-pointer focus:border-[#6366F1]/40"
                                 >
                                   <option value="Kenya" className="bg-[#0D0D1A]">Kenya 🇰🇪</option>
                                   <option value="Nigeria" className="bg-[#0D0D1A]">Nigeria 🇳🇬</option>
@@ -356,7 +356,7 @@ export function Contact() {
                               value={formData.whatsapp}
                               onChange={(e) => setFormData({...formData, whatsapp: e.target.value})}
                               placeholder="+254 700 000 000"
-                              className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#00FFB2]/40 transition-all"
+                              className="w-full bg-white/[0.03] border border-white/[0.1] rounded-xl px-5 py-4 text-[#F0F0FF] outline-none focus:border-[#6366F1]/40 transition-all"
                             />
                           </div>
                         </motion.div>
@@ -371,7 +371,7 @@ export function Contact() {
                       onClick={handleBack}
                       disabled={step === 1 || isSubmitting}
                       className={`flex items-center gap-2 text-sm font-medium transition-all ${
-                        step === 1 ? "opacity-0 pointer-events-none" : "text-[#8888AA] hover:text-[#00FFB2]"
+                        step === 1 ? "opacity-0 pointer-events-none" : "text-[#8888AA] hover:text-[#6366F1]"
                       }`}
                     >
                       <ChevronLeft className="w-4 h-4" /> Back
@@ -381,7 +381,7 @@ export function Contact() {
                       <button
                         type="button"
                         onClick={handleNext}
-                        className="group flex items-center gap-2 px-8 py-3.5 rounded-full bg-white/[0.05] border border-white/10 text-[#F0F0FF] font-semibold hover:bg-[#00FFB2]/20 hover:border-[#00FFB2]/40 transition-all duration-300"
+                        className="group flex items-center gap-2 px-8 py-3.5 rounded-full bg-white/[0.05] border border-white/10 text-[#F0F0FF] font-semibold hover:bg-[#6366F1]/20 hover:border-[#6366F1]/40 transition-all duration-300"
                       >
                         Next Step <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
@@ -389,7 +389,7 @@ export function Contact() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="px-10 py-4 rounded-full bg-gradient-to-r from-[#00FFB2] to-[#7B61FF] text-[#03000A] font-bold text-sm tracking-widest uppercase hover:shadow-[0_0_30px_rgba(0,255,178,0.4)] disabled:opacity-50 transition-all duration-500"
+                        className="px-10 py-4 rounded-full bg-gradient-to-r from-[#6366F1] to-[#7B61FF] text-[#03000A] font-bold text-sm tracking-widest uppercase hover:shadow-[0_0_30px_rgba(0,255,178,0.4)] disabled:opacity-50 transition-all duration-500"
                       >
                         {isSubmitting ? "Processing..." : "Send Project Brief →"}
                       </button>

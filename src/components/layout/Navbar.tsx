@@ -99,7 +99,7 @@ export function Navbar() {
                   className="relative text-sm font-medium tracking-wide text-[#8888AA] hover:text-[#F0F0FF] transition-colors duration-300 group py-1"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-0 h-px bg-gradient-to-r from-[#00FFB2] to-[#7B61FF] w-0 group-hover:w-full transition-all duration-300" />
+                  <span className="absolute bottom-0 left-0 h-px bg-[#6366F1] w-0 group-hover:w-full transition-all duration-300" />
                 </Link>
               </li>
             ))}
@@ -108,10 +108,10 @@ export function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <div className="relative group">
-              <div className="absolute -inset-px rounded-full bg-gradient-to-r from-[#00FFB2] via-[#7B61FF] to-[#FF6B35] opacity-70 group-hover:opacity-100 transition-opacity duration-300 blur-[1px]" />
+              <div className="absolute -inset-px rounded-full bg-gradient-to-r from-[#6366F1] via-[#4F46E5] to-[#7B61FF] opacity-70 group-hover:opacity-100 transition-opacity duration-300 blur-[1px]" />
               <Link
                 href="/contact"
-                className="relative px-6 py-2.5 rounded-full bg-[#03000A] text-sm font-semibold text-[#F0F0FF] hover:text-[#00FFB2] transition-colors duration-300 tracking-wide block"
+                className="relative px-6 py-2.5 rounded-full bg-[#03000A] text-sm font-semibold text-[#F0F0FF] hover:text-[#6366F1] transition-colors duration-300 tracking-wide block"
               >
                 Start a Project →
               </Link>
@@ -186,7 +186,7 @@ export function Navbar() {
                     <Link
                       href={link.href}
                       onClick={close}
-                      className="text-4xl font-bold text-[#F0F0FF] hover:text-[#00FFB2] transition-colors duration-300 tracking-tight py-2 block"
+                      className="text-4xl font-bold text-[#F0F0FF] hover:text-[#6366F1] transition-colors duration-300 tracking-tight py-2 block"
                     >
                       {link.label}
                     </Link>
@@ -205,14 +205,14 @@ export function Navbar() {
                 <div className="space-y-1">
                   <a
                     href="mailto:hello@axelo.io"
-                    className="flex items-center gap-2 text-[13px] font-mono text-[#8888AA] hover:text-[#00FFB2] transition-colors duration-300"
+                    className="flex items-center gap-2 text-[13px] font-mono text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300"
                   >
                     <Mail className="w-3.5 h-3.5" />
                     hello@axelo.io
                   </a>
                   <a
                     href="tel:+254700000000"
-                    className="text-[13px] font-mono text-[#8888AA] hover:text-[#00FFB2] transition-colors duration-300 block"
+                    className="text-[13px] font-mono text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300 block"
                   >
                     +254 700 000 000
                   </a>

@@ -24,8 +24,8 @@ const companies = [
 const LogoPlaceholder = ({ name }: { name: string }) => (
   <div className="flex items-center gap-3 flex-shrink-0 group cursor-default">
     {/* Icon placeholder — unique shape per company via hash */}
-    <div className="w-7 h-7 rounded-md bg-white/[0.06] border border-white/[0.08] flex items-center justify-center group-hover:bg-[#00FFB2]/10 group-hover:border-[#00FFB2]/20 transition-all duration-300">
-      <span className="text-[9px] font-bold text-[#8888AA] group-hover:text-[#00FFB2] transition-colors duration-300 font-mono">
+    <div className="w-7 h-7 rounded-md bg-white/[0.06] border border-white/[0.08] flex items-center justify-center group-hover:bg-[#6366F1]/10 group-hover:border-[#6366F1]/20 transition-all duration-300">
+      <span className="text-[9px] font-bold text-[#8888AA] group-hover:text-[#6366F1] transition-colors duration-300 font-mono">
         {name.slice(0, 2).toUpperCase()}
       </span>
     </div>
@@ -61,7 +61,7 @@ export const TrustBar = memo(() => (
         ))}
         {/* Separator dots */}
         {Array.from({ length: companies.length }).map((_, i) => (
-          <span key={`dot-${i}`} className="text-[#00FFB2]/30 text-xs flex-shrink-0">
+          <span key={`dot-${i}`} className="text-[#6366F1]/30 text-xs flex-shrink-0">
             ·
           </span>
         ))}

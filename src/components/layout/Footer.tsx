@@ -117,7 +117,7 @@ export function Footer() {
 
             <a
               href="mailto:hello@axelo.io"
-              className="text-[12px] font-mono text-[#8888AA] hover:text-[#00FFB2] transition-colors duration-300 flex items-center gap-1.5"
+              className="text-[12px] font-mono text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300 flex items-center gap-1.5"
             >
               <Mail className="w-3 h-3" />
               hello@axelo.io
@@ -134,9 +134,9 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[13px] text-[#8888AA] hover:text-[#00FFB2] transition-colors duration-300 flex items-center gap-1.5 group"
+                    className="text-[13px] text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300 flex items-center gap-1.5 group"
                   >
-                    <span className="w-0 group-hover:w-3 overflow-hidden transition-all duration-300 text-[#00FFB2]">→</span>
+                    <span className="w-0 group-hover:w-3 overflow-hidden transition-all duration-300 text-[#6366F1]">→</span>
                     {link.label}
                   </Link>
                 </li>
@@ -154,9 +154,9 @@ export function Footer() {
                 <li key={svc.label}>
                   <Link
                     href={svc.href}
-                    className="text-[13px] text-[#8888AA] hover:text-[#00FFB2] transition-colors duration-300 flex items-center gap-1.5 group"
+                    className="text-[13px] text-[#8888AA] hover:text-[#6366F1] transition-colors duration-300 flex items-center gap-1.5 group"
                   >
-                    <span className="w-0 group-hover:w-3 overflow-hidden transition-all duration-300 text-[#00FFB2]">→</span>
+                    <span className="w-0 group-hover:w-3 overflow-hidden transition-all duration-300 text-[#6366F1]">→</span>
                     {svc.label}
                   </Link>
                 </li>
@@ -224,7 +224,7 @@ export function Footer() {
               <span key={l.label} className="flex items-center gap-4">
                 <Link
                   href={l.href}
-                  className="text-[11px] font-mono text-[#8888AA]/60 hover:text-[#00FFB2] transition-colors duration-300"
+                  className="text-[11px] font-mono text-[#8888AA]/60 hover:text-[#6366F1] transition-colors duration-300"
                 >
                   {l.label}
                 </Link>
