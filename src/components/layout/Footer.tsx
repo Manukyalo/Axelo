@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Linkedin, Twitter, Github, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -80,19 +81,15 @@ export function Footer() {
           {/* Column 1 — Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group" aria-label="Nova Tech Africa Home">
-              <div className="relative w-9 h-9 flex-shrink-0">
-                <svg viewBox="0 0 40 46" fill="none" className="w-full h-full">
-                  <path d="M20 1L38.66 11.5V32.5L20 43L1.34 32.5V11.5L20 1Z" stroke="url(#footer-hex-grad)" strokeWidth="1.5" fill="none" />
-                  <path d="M20 10L30.39 16V28L20 34L9.61 28V16L20 10Z" fill="url(#footer-hex-grad)" opacity="0.3" />
-                  <circle cx="20" cy="23" r="3" fill="#00FFB2" />
-                  <defs>
-                    <linearGradient id="footer-hex-grad" x1="0" y1="0" x2="40" y2="46">
-                      <stop stopColor="#00FFB2" />
-                      <stop offset="1" stopColor="#7B61FF" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div className="absolute inset-0 rounded-full bg-[#00FFB2]/10 blur-md group-hover:bg-[#00FFB2]/20 transition-all duration-500" />
+              <div className="relative w-10 h-10 flex-shrink-0 group-hover:scale-105 transition-transform duration-500">
+                <Image 
+                  src="/icon.png" 
+                  alt="Nova Tech Africa Logo" 
+                  width={40} 
+                  height={40}
+                  className="relative z-10"
+                />
+                <div className="absolute inset-0 rounded-full bg-[#00FFB2]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <span className="text-sm font-bold tracking-[0.15em] uppercase text-[#F0F0FF] leading-tight">
                 Nova Tech<br /><span className="text-[#00FFB2]">Africa</span>
