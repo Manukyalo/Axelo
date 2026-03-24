@@ -110,7 +110,8 @@ export const TechStack = memo(() => (
           className="font-bold text-[#F0F0FF] tracking-tighter leading-[1.05] mb-5"
           style={{ fontSize: "clamp(28px, 4vw, 56px)" }}
         >
-          Our Technology <span className="text-gradient-mint">Arsenal</span>
+          Our Technology <span className="text-gradient-indigo
+">Arsenal</span>
         </h2>
         <p className="text-[#8888AA] max-w-md mx-auto text-[14px] leading-[1.8]">
           We work with the world&apos;s most powerful and proven modern technologies.

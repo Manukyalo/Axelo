@@ -72,7 +72,7 @@ export function Process() {
             className="font-bold text-[#F0F0FF] tracking-tighter leading-[1.05] mb-5"
             style={{ fontSize: "clamp(32px, 5vw, 64px)" }}
           >
-            How We <span className="text-gradient-mint">Work</span>
+            How We <span className="text-gradient-indigo">Work</span>
           </h2>
           <p className="text-[#8888AA] max-w-md mx-auto text-[15px] leading-[1.8]">
             A battle-tested 4-phase process that delivers on time, every time.

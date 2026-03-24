@@ -140,7 +140,7 @@ export default function AboutPage() {
         {/* Join our team CTA */}
         <section className="text-center py-24 glass rounded-[40px] border border-white/[0.1] relative overflow-hidden group">
            <div className="absolute inset-0 bg-gradient-to-br from-[#00FFB2]/5 via-transparent to-transparent pointer-events-none" />
-           <h2 className="text-4xl md:text-5xl font-bold mb-8 relative z-10">We&apos;re Always Looking For <br /> <span className="text-gradient-mint">Exceptional Talent</span></h2>
+           <h2 className="text-4xl md:text-5xl font-bold mb-8 relative z-10">We&apos;re Always Looking For <br /> <span className="text-gradient-indigo">Exceptional Talent</span></h2>
            <p className="text-[#8888AA] text-lg max-w-xl mx-auto mb-12 relative z-10">
               Join a team of elite engineers and designers building the next generation of digital products.
            </p>

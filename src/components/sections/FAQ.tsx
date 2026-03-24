@@ -83,7 +83,8 @@ export function FAQ() {
             style={{ fontSize: "clamp(28px, 4vw, 56px)" }}
           >
             Frequently Asked{" "}
-            <span className="text-gradient-mint">Questions</span>
+            <span className="text-gradient-indigo
+">Questions</span>
           </h2>
           <p className="text-[#8888AA] text-[14px] leading-[1.8]">
             Everything you need to know before starting a project with us.

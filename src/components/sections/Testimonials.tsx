@@ -93,7 +93,7 @@ export function Testimonials() {
             className="font-bold text-[#F0F0FF] tracking-tighter"
             style={{ fontSize: "clamp(30px, 4.5vw, 60px)" }}
           >
-            What Our <span className="text-gradient-mint">Clients Say</span>
+            What Our <span className="text-gradient-indigo">Clients Say</span>
           </h2>
         </motion.div>
 

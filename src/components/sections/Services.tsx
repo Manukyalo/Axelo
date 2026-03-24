@@ -177,7 +177,7 @@ export const Services = memo(() => (
           className="font-bold text-[#F0F0FF] tracking-tighter leading-[1.05] mb-5"
           style={{ fontSize: "clamp(34px, 5vw, 68px)" }}
         >
-          What We <span className="text-gradient-mint">Build</span>
+          What We <span className="text-gradient-indigo">Build</span>
         </h2>
         <p className="text-[#8888AA] max-w-lg mx-auto text-[15px] leading-[1.8]">
           End-to-end digital engineering across six specialized disciplines.
