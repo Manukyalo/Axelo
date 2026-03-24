@@ -6,26 +6,28 @@ import { ArrowUpRight } from "lucide-react";
 
 const caseStudies = [
   {
-    id: "nexgen-erp",
-    title: "NexGen ERP",
-    industry: ["Logistics", "Cloud Software"],
+    id: "car-clan",
+    title: "Car Clan",
+    industry: ["Automotive", "E-commerce"],
     result:
-      "Reduced operational overhead by 34% for a multinational logistics firm operating across 6 African countries. Handles 500,000+ daily transactions with 99.97% uptime.",
-    stack: ["Next.js", "PostgreSQL", "AWS", "Docker", "Redis"],
+      "A premium car rental and management platform for a high-end fleet in Kenya. Features real-time booking, automated invoicing, and fleet tracking.",
+    stack: ["Next.js", "Firebase", "Tailwind CSS", "Framer Motion"],
     accent: "#00FFB2",
     year: "2025",
     gradient: "from-[#00FFB2]/10 via-[#7B61FF]/5 to-transparent",
+    liveUrl: "https://car-clan.vercel.app/",
   },
   {
-    id: "aura-pay",
-    title: "Aura Pay",
-    industry: ["FinTech", "AI"],
+    id: "hope-counseling",
+    title: "Hope Counseling",
+    industry: ["Mental Health", "Personal Branding"],
     result:
-      "Processed over $12M in transactions in the first quarter post-launch. ML fraud detection model achieved 99.2% accuracy, reducing chargebacks by 67%.",
-    stack: ["Python", "TensorFlow", "Node.js", "React", "Kubernetes"],
+      "Modern, empathetic personal website for a professional counselor. Built to provide a serene digital space for university students seeking mental health support.",
+    stack: ["Next.js", "Framer Motion", "Tailwind CSS", "Vercel"],
     accent: "#7B61FF",
     year: "2025",
     gradient: "from-[#7B61FF]/10 via-[#FF6B35]/5 to-transparent",
+    liveUrl: "https://hope-counseling-support-services.vercel.app/",
   },
   {
     id: "eastern-vacations-ems",
