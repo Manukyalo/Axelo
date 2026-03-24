@@ -82,8 +82,15 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-5 group" aria-label="Axelo Home">
               <div className="relative w-9 h-9 flex-shrink-0 group-hover:scale-105 transition-transform duration-500">
                 <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  <path d="M18 4L32 30H4L18 4Z" stroke="#6366F1" strokeWidth="2.5" fill="none"/>
-                  <path d="M11 21H25" stroke="#6366F1" strokeWidth="2.5" strokeLinecap="round"/>
+                  <defs>
+                    <linearGradient id="footer-lg" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#6366F1"/>
+                      <stop offset="100%" stopColor="#7B61FF"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="36" height="36" rx="9" fill="url(#footer-lg)" fillOpacity="0.15"/>
+                  <path d="M18 9L27 25H9L18 9Z" fill="url(#footer-lg)"/>
+                  <rect x="13" y="20" width="10" height="2" rx="1" fill="#03000A" fillOpacity="0.85"/>
                 </svg>
                 <div className="absolute inset-0 bg-[#6366F1]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
