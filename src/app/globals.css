@@ -153,3 +153,42 @@ body::before {
     linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
+
+/* Mobile hero CSS gradient fallback (replaces Three.js) */
+.hero-mobile-gradient {
+  background: linear-gradient(135deg, #03000A 0%, #0D0D1A 50%, #03000A 100%);
+  animation: hero-pulse 6s ease-in-out infinite;
+}
+
+@keyframes hero-pulse {
+  0%, 100% {
+    background: linear-gradient(135deg, #03000A 0%, #0D0D1A 50%, #03000A 100%);
+    opacity: 1;
+  }
+  50% {
+    background: linear-gradient(135deg, #060010 0%, #0F0F22 50%, #060010 100%);
+    opacity: 0.95;
+  }
+}
+
+/* ─────────────────────────────────────────────────────── */
+/*  Accessibility — Reduced Motion                         */
+/* ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-mobile-gradient {
+    animation: none;
+  }
+  .animate-marquee,
+  .animate-pulse-glow,
+  .animate-float {
+    animation: none;
+  }
+}

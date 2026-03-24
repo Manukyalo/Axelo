@@ -6,85 +6,38 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "How much does it cost to build a web application in Kenya?",
-    a: "Web application costs vary based on complexity, features, and timeline. Simple apps typically start from $5,000–$15,000, while enterprise-grade platforms with custom backends, AI features, and multi-tenant architecture range from $30,000–$150,000+. We always provide a detailed, transparent quote after a free discovery call — no hidden costs.",
+    q: "How much does it cost to build a web application in Africa?",
+    a: "Our web application projects typically range from $8,000 for lean MVPs to $50,000+ for enterprise-grade platforms. Pricing depends on complexity, integrations, and timeline. We offer a free consultation to give you an accurate scoped estimate before any commitment.",
   },
   {
     q: "How long does it take to develop a SaaS platform?",
-    a: "A minimum viable SaaS product typically takes 3–5 months from discovery to launch. A full-featured platform with billing, analytics, user management, and custom integrations can take 6–12 months. We use agile two-week sprints, so you see working software every two weeks and can provide continuous feedback throughout the build.",
+    a: "A well-scoped SaaS MVP typically takes 8–14 weeks from kickoff to launch. Full-featured enterprise platforms can take 4–9 months. We use agile 2-week sprints so you see working software every two weeks, not just at the end.",
   },
   {
     q: "Do you work with startups or only enterprises?",
-    a: "We work with both — from seed-stage startups building their first MVP to large enterprises modernizing legacy systems. Our engagement models are flexible: fixed-scope projects, time-and-materials retainers, or dedicated team augmentation. We've helped early-stage startups raise funding rounds using platforms we built for them.",
-  },
-  {
-    q: "What technologies does Nova Tech Africa use?",
-    a: "Our core stack includes Next.js, React, TypeScript, and Python for application development; PostgreSQL, Redis, and Firebase for data; TensorFlow, PyTorch, and LangChain for AI/ML; and AWS, GCP, and Kubernetes for cloud infrastructure. We recommend the right tools for your specific needs — not a one-size-fits-all template.",
+    a: "Both. We work with funded startups building their first product and established enterprises modernizing legacy systems. Our minimum engagement is $8,000, which makes us a fit for serious founders and growing companies.",
   },
   {
     q: "Can you integrate AI into our existing system?",
-    a: "Absolutely. We specialize in AI integration for existing platforms — adding intelligent features like natural language interfaces, predictive analytics, document processing, fraud detection, and recommendation engines. We audit your current stack, identify the highest-impact AI use cases, and build integrations that work with your existing data and infrastructure.",
+    a: "Yes — AI integration and augmentation of existing platforms is one of our core services. We've integrated LLMs, computer vision models, and predictive analytics engines into platforms built on various tech stacks.",
   },
   {
-    q: "Do you provide post-launch support and maintenance?",
-    a: "Yes. All projects include a 30-day post-launch warranty covering bug fixes and critical issues. Beyond that, we offer flexible retainer plans covering ongoing maintenance, feature development, performance monitoring, security updates, and priority technical support — typically from $1,500/month depending on scope.",
+    q: "Do you work with international clients outside Africa?",
+    a: "Absolutely. While we're based in Nairobi, we've delivered projects for clients in the UK, USA, UAE, and across Africa. We operate in UTC+3 and work asynchronously to accommodate any timezone.",
   },
   {
-    q: "Are you able to work with international clients?",
-    a: "Yes — we work with clients across Africa, the UK, the United States, and beyond. We're fully remote-capable with experience collaborating across time zones. Project management is handled through modern async tools (Notion, Linear, Slack) and we hold regular video syncs at times convenient for your team, wherever you are.",
+    q: "What happens after the project launches?",
+    a: "We offer retainer-based maintenance packages covering bug fixes, performance monitoring, security patches, and feature iterations. Most clients stay on a monthly retainer post-launch.",
   },
   {
     q: "How do I start a project with Nova Tech Africa?",
-    a: "Simply fill out our contact form or email hello@novatechafrica.com. We'll respond within 24 hours to schedule a free 45-minute discovery call where we learn about your vision, technical requirements, and goals. After the call, we prepare a detailed proposal, timeline, and fixed-price quote — no obligation, no pressure.",
+    a: "Fill out our project intake form on the contact page. We respond within 24 hours to schedule a free 30-minute discovery call where we learn about your goals and propose an approach.",
+  },
+  {
+    q: "Do you sign NDAs?",
+    a: "Yes, always. We sign mutual NDAs before any discovery call where sensitive business information is shared. Client confidentiality is a core part of how we operate.",
   },
 ];
-
-function FAQItem({ item, index }: { item: typeof faqs[0]; index: number }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.06, duration: 0.45 }}
-      className="border-b border-white/[0.07] last:border-0"
-    >
-      <button
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-        className="w-full flex items-center justify-between gap-4 py-5 text-left group"
-      >
-        <span className="text-[15px] font-medium text-[#F0F0FF] group-hover:text-[#00FFB2] transition-colors duration-300 leading-snug">
-          {item.q}
-        </span>
-        <motion.div
-          animate={{ rotate: open ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="flex-shrink-0"
-        >
-          <ChevronDown className="w-4 h-4 text-[#8888AA] group-hover:text-[#00FFB2] transition-colors duration-300" />
-        </motion.div>
-      </button>
-
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden"
-          >
-            <p className="pb-5 text-[#8888AA] text-[14px] leading-[1.85] max-w-3xl">
-              {item.a}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-}
 
 // FAQ JSON-LD structured data
 const faqJsonLd = {
@@ -98,6 +51,10 @@ const faqJsonLd = {
 };
 
 export function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
+
   return (
     <section
       className="py-32 px-6 relative z-10 w-full bg-[#03000A] border-t border-white/[0.04]"
@@ -125,16 +82,57 @@ export function FAQ() {
             className="font-bold text-[#F0F0FF] tracking-tighter mb-5"
             style={{ fontSize: "clamp(28px, 4vw, 56px)" }}
           >
-            Frequently Asked <span className="text-gradient-mint">Questions</span>
+            Frequently Asked{" "}
+            <span className="text-gradient-mint">Questions</span>
           </h2>
           <p className="text-[#8888AA] text-[14px] leading-[1.8]">
-            Everything you need to know about working with Nova Tech Africa.
+            Everything you need to know before starting a project with us.
           </p>
         </motion.div>
 
         <div className="glass rounded-2xl border border-white/[0.07] px-6 md:px-10">
           {faqs.map((item, i) => (
-            <FAQItem key={i} item={item} index={i} />
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.45 }}
+              className="border-b border-white/[0.07] last:border-0"
+            >
+              <button
+                onClick={() => toggle(i)}
+                aria-expanded={openIndex === i}
+                className="w-full flex items-center justify-between gap-4 py-5 text-left group"
+              >
+                <span className="text-[15px] font-medium text-[#F0F0FF] group-hover:text-[#00FFB2] transition-colors duration-300 leading-snug">
+                  {item.q}
+                </span>
+                <motion.div
+                  animate={{ rotate: openIndex === i ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex-shrink-0"
+                >
+                  <ChevronDown className="w-4 h-4 text-[#8888AA] group-hover:text-[#00FFB2] transition-colors duration-300" />
+                </motion.div>
+              </button>
+
+              <AnimatePresence initial={false}>
+                {openIndex === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <p className="pb-5 text-[#8888AA] text-[14px] leading-[1.85] max-w-3xl">
+                      {item.a}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
 

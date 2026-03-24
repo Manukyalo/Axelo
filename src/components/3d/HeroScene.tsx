@@ -203,10 +203,25 @@ function SceneContent({
   );
 }
 
+/* ─── CSS Gradient fallback (mobile) ─── */
+function MobileGradientFallback() {
+  return (
+    <div
+      className="absolute inset-0 -z-10 overflow-hidden pointer-events-none"
+      aria-hidden="true"
+    >
+      <div className="hero-mobile-gradient absolute inset-0" />
+    </div>
+  );
+}
+
 /* ─── Export ─── */
 export function HeroScene() {
   const isMobile = useIsMobile();
   const mouse = useMouseNDC();
+
+  // Fully skip Three.js on mobile — use pure CSS gradient for performance
+  if (isMobile) return <MobileGradientFallback />;
 
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
@@ -223,7 +238,7 @@ export function HeroScene() {
         dpr={[1, 1.5]}
       >
         <Suspense fallback={null}>
-          <SceneContent isMobile={isMobile} mouse={mouse} />
+          <SceneContent isMobile={false} mouse={mouse} />
           <Preload all />
         </Suspense>
       </Canvas>
